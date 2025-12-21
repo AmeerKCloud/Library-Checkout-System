@@ -31,5 +31,3 @@
 # - models.py — classes
 # - library_data.py — starting book list
 # - main.py — main loop
-
-
