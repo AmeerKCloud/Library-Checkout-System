@@ -31,3 +31,9 @@
 # - models.py — classes
 # - library_data.py — starting book list
 # - main.py — main loop
+
+
+title = input("Book title:\n")
+author = input("Authors name:\n")
+
+
