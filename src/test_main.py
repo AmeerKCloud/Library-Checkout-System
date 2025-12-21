@@ -16,40 +16,20 @@
 # Requirements
 # Your final program must:
 # ✓ Include a Book class
-# Title, author, available (boolean)
-
-
+# - Title, author, available (boolean)
 # ✓ Include a Library class
-# Stores books in a dictionary: {book_id: Book_object}
-
-
-# Methods: show_books(), borrow_book(), return_book()
-
-
+# - Stores books in a dictionary: {book_id: Book_object}
+# - Methods: show_books(), borrow_book(), return_book()
 # ✓ Include a User class
-# Tracks borrowed books
-
-
-# Method: borrow(), return_book()
-
-
+# - Tracks borrowed books
+# - Method: borrow(), return_book()
 # ✓ Use user input for:
-# Selecting books
-
-
-# Borrowing
-
-
-# Returning
-
-
+# - Selecting books
+# - Borrowing
+# - Returning
 # ✓ Use modules
-# models.py — classes
-
-
-# library_data.py — starting book list
-
-
-# main.py — main loop
+# - models.py — classes
+# - library_data.py — starting book list
+# - main.py — main loop
 
 
