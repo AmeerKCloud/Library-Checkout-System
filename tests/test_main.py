@@ -33,7 +33,7 @@
 # - main.py — main loop
 
 
-title = input("Book title:\n")
-author = input("Authors name:\n")
+title = input("Book title:\n").title()
+author = input("Authors name:\n").title()
 
 
