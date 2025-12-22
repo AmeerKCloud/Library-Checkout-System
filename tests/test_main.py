@@ -42,7 +42,7 @@ current_file_location = __file__
 project_folder = os.path.dirname(current_file_location)
 
 #⬇️ Step 3: point to the json file inside the 'data' folder
-json_file_path = os.path.join
+json_file_path = os.path.join(project_folder, "data", "library_books.json")
 
 while True:
     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
