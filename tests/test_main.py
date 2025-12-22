@@ -35,20 +35,7 @@
 import json
 import os
 
-#⬇️ Step 1: find where your current python file lives
-current_file_location = __file__
 
-#⬇️ Step 2: move up to the main project folder
-project_folder = os.path.dirname(current_file_location)
-
-#⬇️ Step 3: point to the json file inside the 'data' folder
-json_file_path = os.path.join(project_folder, "data", "library_books.json")
-
-#⬇️ Step 4: open and read the json file:
-with open(json_file_path, "r") as file:
-    data = json.load(file)
-
-print(data)
 
 # while True:
 #     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
