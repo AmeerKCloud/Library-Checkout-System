@@ -44,6 +44,9 @@ while True:
     else:
         break
 
-    keep_going = input()
+    keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
+
+    if keep_going == 'e':
+        break
 
 
