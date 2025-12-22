@@ -50,20 +50,20 @@ with open(json_file_path, "r") as file:
 
 print(data)
 
-while True:
-    borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
+# while True:
+#     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
 
-    if borrow_or_return == 'b':
-        title = input("Book title:\n").title()
-        author = input("Authors name:\n").title()
-    elif borrow_or_return == 'r':
-        pass
-    else:
-        break
+#     if borrow_or_return == 'b':
+#         title = input("Book title:\n").title()
+#         author = input("Authors name:\n").title()
+#     elif borrow_or_return == 'r':
+#         pass
+#     else:
+#         break
 
-    keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
+#     keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
 
-    if keep_going == 'e':
-        break
+#     if keep_going == 'e':
+#         break
 
 
