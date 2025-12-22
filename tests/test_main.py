@@ -32,6 +32,11 @@
 # - library_data.py — starting book list
 # - main.py — main loop
 
+import json
+import os
+
+#⬇️Step 1: find where your current python file lives
+current_file_location = __file__
 
 while True:
     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
