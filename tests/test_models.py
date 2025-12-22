@@ -12,4 +12,4 @@ class Book:
 
 class User:
     def __init__(self):
-        pass
+        self.borrowed_books = {}
