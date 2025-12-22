@@ -13,3 +13,9 @@ class Book:
 class User:
     def __init__(self):
         self.borrowed_books = {}
+
+    def borrow(self):
+        pass
+
+    def return_book(self):
+        pass
