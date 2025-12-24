@@ -79,7 +79,7 @@ def get_data_file(filename):
 
     #📝 os.path.join() safely combines folder names into a full path.
     #📝 This avoids hardcoding paths like:
-    #   "../data/library_books.json"  ❌ (fragile and unsafe)
+    #📝   "../data/library_books.json"  ❌ (fragile and unsafe)
 
     # return os.path.join(
     #     get_project_root(),  #⬅️ The main project folder
