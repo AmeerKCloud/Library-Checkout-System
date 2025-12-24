@@ -32,25 +32,40 @@
 # - library_data.py — starting book list
 # - main.py — main loop
 
-import json
+
+import sys
 import os
 
+# ⬇️Add project root to Python path
+PRJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(PRJECT_ROOT)
+
+import json
+from src.modules.utils import get_data_file
+
+def test_load_books():
+    json_file_path = get_data_file("library_books.json")
+
+    with open(json_file_path, "r") as file:
+        books = json.load(file)
+
+    assert len(books) > 0
 
 
-while True:
-    borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
+# while True:
+#     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
 
-    if borrow_or_return == 'b':
-        title = input("Book title:\n").title()
-        author = input("Authors name:\n").title()
-    elif borrow_or_return == 'r':
-        pass
-    else:
-        break
+#     if borrow_or_return == 'b':
+#         title = input("Book title:\n").title()
+#         author = input("Authors name:\n").title()
+#     elif borrow_or_return == 'r':
+#         pass
+#     else:
+#         break
 
-    keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
+#     keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
 
-    if keep_going == 'e':
-        break
+#     if keep_going == 'e':
+#         break
 
 
