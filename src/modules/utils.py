@@ -1,3 +1,8 @@
+# Utility helper functions shared across the project.
+# Includes reusable input validation, formatting, and helper logic.
+
+
+
 import os
 
 def get_project_root():
@@ -8,6 +13,6 @@ def get_project_root():
 def get_data_file(filename):
     return os.path.join(get_project_root(), "data", filename)
 
-get_data_file("library_books.json")
+
 
 
