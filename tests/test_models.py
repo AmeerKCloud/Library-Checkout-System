@@ -3,6 +3,7 @@
 
 
 class Library:
+    """This class stores books in either a dict. or a list."""
     def __init__(self, json_books_data):
         self.json_books_data = json_books_data
 
