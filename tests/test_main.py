@@ -55,9 +55,11 @@ def test_load_books():
     # print(books)
 
     assert len(books) > 0
+    return books
     
 
 library = Library(test_load_books())
+library.show_books()
 
 # test_load_books()                       #⬅️ Remember to call a function to make use of it.
 
