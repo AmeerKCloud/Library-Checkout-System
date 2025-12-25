@@ -6,7 +6,11 @@ class Library:
     """This class stores books in either a dict. or a list."""
     def __init__(self, json_books_data):
         self.json_books_data = json_books_data
-        self.library = []
+        # self.library = []
+
+    def show_books(self):
+        for item in self.json_books_data:
+            print(item)
 
 class Book:
     """Title, author, available (boolean)"""

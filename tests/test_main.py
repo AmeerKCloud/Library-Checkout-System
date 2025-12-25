@@ -33,6 +33,8 @@
 # - main.py — main loop
 
 
+from test_models import Library
+
 import sys
 import os
 
@@ -49,28 +51,30 @@ def test_load_books():
     with open(json_file_path, "r") as file:
         books = json.load(file)
     
-    print("\nLoaded books data:")
-    print(books)
+    # print("\nLoaded books data:")
+    # print(books)
 
     assert len(books) > 0
     
 
-test_load_books()                       #⬅️ Remember to call a function to make use of it.
+library = Library(test_load_books())
 
-while True:
-    borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
+# test_load_books()                       #⬅️ Remember to call a function to make use of it.
 
-    if borrow_or_return == 'b':
-        title = input("Book title:\n").title()
-        author = input("Authors name:\n").title()
-    elif borrow_or_return == 'r':
-        pass
-    else:
-        break
+# while True:
+#     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
 
-    keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
+#     if borrow_or_return == 'b':
+#         title = input("Book title:\n").title()
+#         author = input("Authors name:\n").title()
+#     elif borrow_or_return == 'r':
+#         pass
+#     else:
+#         break
 
-    if keep_going == 'e':
-        break
+#     keep_going = input("Press 'e' to exit. Press any other key to return to the main menu:\n").lower()
+
+#     if keep_going == 'e':
+#         break
 
 
