@@ -8,6 +8,7 @@ class Library:
         self.json_books_data = json_books_data
 
 class Book:
+    """Title, author, available (boolean)"""
     def __init__(self, title, author):
         self.title = title
         self.author = author
@@ -17,7 +18,9 @@ class Book:
 
 
 class User:
-    def __init__(self):
+    """Tracks borrowed books"""
+    def __init__(self, user_name):
+        self.user_name = user_name
         self.borrowed_books = {}
 
     def borrow(self):
