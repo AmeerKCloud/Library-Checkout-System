@@ -4,7 +4,9 @@
 
 class Library:
     """This class stores books in either a dict. or a list."""
-    def __init__(self, json_books_data):
+    def __init__(self, book_title, book_author, json_books_data):
+        self.book_title = book_title
+        self.book_author = book_author
         self.json_books_data = json_books_data
         # self.library = []
 
@@ -15,11 +17,21 @@ class Library:
             for key, value in item.items():
                 print(f"{key}: {value}")
 
+    def borrow_book(self):
+        for item in self.json_books_data:
+            for key, value in item.items():
+                if key == "title"
+        pass
+
+    def return_book(self):
+        pass
+
 class Book:
     """Title, author, available (boolean)"""
-    def __init__(self, title, author):
+    def __init__(self, title, author, json_books_data):
         self.title = title
         self.author = author
+        self.json_books_data = json_books_data
 
     def is_available(self):
         pass
@@ -27,8 +39,9 @@ class Book:
 
 class User:
     """Tracks borrowed books"""
-    def __init__(self, user_name):
+    def __init__(self, user_name, json_books_data):
         self.user_name = user_name
+        self.json_books_data = json_books_data
         self.borrowed_books = {}
 
     def borrow(self):
