@@ -85,7 +85,7 @@ def get_data_file(filename):
     # return os.path.join(
     #     get_project_root(),  #⬅️ The main project folder
     #     "data",              #⬅️ The data sub-folder
-    #     filename             #⬅️ The specific file you want
+    #     filename             #⬅️ The specific file you want, in this case "library_books.json"
     # )
 
 # ---------------------------------------------------------------
