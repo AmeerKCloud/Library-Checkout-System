@@ -19,8 +19,8 @@ class Library:
 
     def borrow_book(self):
         for item in self.json_books_data:
-            for key, value in item.items():
-                if key == "title"
+            for key, in item:
+                if item[key] == self.book_title
         pass
 
     def return_book(self):
