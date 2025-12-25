@@ -20,7 +20,8 @@ class Library:
     def borrow_book(self):
         for item in self.json_books_data:
             for key, in item:
-                if item[key] == self.book_title
+                if item[key] == self.book_title:
+                    pass                     #⬅️ Currently here. Trying 2 validate users choice in book & author.
         pass
 
     def return_book(self):
