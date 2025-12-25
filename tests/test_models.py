@@ -9,8 +9,11 @@ class Library:
         # self.library = []
 
     def show_books(self):
+        print("\n-----------------------All of our titles:----------------------------:")
         for item in self.json_books_data:
-            print(item)
+            print("__________________________________________________")
+            for key, value in item.items():
+                print(f"{key}: {value}")
 
 class Book:
     """Title, author, available (boolean)"""

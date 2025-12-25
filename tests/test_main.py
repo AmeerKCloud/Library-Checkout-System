@@ -51,8 +51,8 @@ def test_load_books():
     with open(json_file_path, "r") as file:
         books = json.load(file)
     
-    # print("\nLoaded books data:")
-    # print(books)
+    # print("\nLoaded books data:")  
+    # print(books)                                  #⬅️ For testing code purposes
 
     assert len(books) > 0
     return books
