@@ -48,9 +48,12 @@ def test_load_books():
 
     with open(json_file_path, "r") as file:
         books = json.load(file)
+    
+    print("\nLoaded books data:")
+    print(books)
 
     assert len(books) > 0
-
+    
 
 # while True:
 #     borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, or 'e' for exit:\n").lower()
