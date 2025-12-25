@@ -49,7 +49,6 @@ def test_load_books():
     with open(json_file_path, "r") as file:
         books = json.load(file)
 
-    print(books)
     assert len(books) > 0
 
 
