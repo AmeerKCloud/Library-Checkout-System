@@ -6,7 +6,7 @@
 import os
 
 def get_project_root():
-    return os.path.dirname(__file__)
+    return os.path.dirname(os.path.dirname(__file__))
 
 #⬇️ This function gets imported & invoked in other files, with name of intended file in place of paremeter 'filename'
 def get_data_file(filename):
