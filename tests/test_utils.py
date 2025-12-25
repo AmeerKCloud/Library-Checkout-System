@@ -46,7 +46,7 @@ def get_data_file(filename):
     #
     #📝 os.path.dirname(path) means:
     #📝   "Go UP one folder from this path"
-    #     The more times this is written, the more folders it will traverse from current path.
+    #     The more times this is layered, the more folders it will traverse from current path.
 
     #📝 First dirname:
     #📝 path_utils.py  →  modules
