@@ -41,7 +41,7 @@ PRJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(PRJECT_ROOT)
 
 import json
-from src.modules.utils import get_data_file
+from test_utils import get_data_file
 
 def test_load_books():
     json_file_path = get_data_file("library_books.json")
