@@ -60,8 +60,6 @@ def test_load_books():
 
 library = Library(None, None, test_load_books())
 
-# test_load_books()                       #⬅️ Remember to call a function to make use of it.
-
 while True:
     user_option_choice = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
