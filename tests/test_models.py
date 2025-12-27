@@ -24,6 +24,7 @@ class Library:
                 print(f"\n")
                 for key, value in item.items():
                     print(f"{key}: {value}")
+                item["available"] = False
         pass
 
     def return_book(self):
