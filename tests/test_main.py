@@ -66,8 +66,8 @@ while True:
     user_option_choice = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
     if user_option_choice == 'b':
-        title = input("Book title:\n").title()
-        author = input("Authors name:\n").title()
+        title = input("\nBook title:\n").title()
+        author = input("\nAuthors name:\n").title()
 
         library = Library(title, author, test_load_books())
         library.borrow_book()
