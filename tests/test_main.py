@@ -63,14 +63,14 @@ library = Library(test_load_books())
 # test_load_books()                       #⬅️ Remember to call a function to make use of it.
 
 while True:
-    borrow_or_return = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
+    user_option_choice = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
-    if borrow_or_return == 'b':
+    if user_option_choice == 'b':
         title = input("Book title:\n").title()
         author = input("Authors name:\n").title()
-    elif borrow_or_return == 'r':
+    elif user_option_choice == 'r':
         pass
-    elif borrow_or_return == 'v':
+    elif user_option_choice == 'v':
         library.show_books()
     else:
         break
