@@ -19,10 +19,7 @@ class Library:
 
     def borrow_book(self):
         for item in self.json_books_data_list:
-            # for key, in item:
-            #     if item[key] == self.book_title:
-            #         pass                     #⬅️ Currently here. Trying 2 validate users choice in book & author.
-            if self.book_title in item and self.book_author in item:
+            if self.book_title in item.values() and self.book_author in item.values():
                 print(f"Title: {self.book_title}, and Author: {self.book_author}, exist.")
         pass
 
