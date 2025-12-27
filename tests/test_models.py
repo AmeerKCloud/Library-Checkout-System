@@ -4,21 +4,21 @@
 
 class Library:
     """This class stores books in either a dict. or a list."""
-    def __init__(self, book_title, book_author, json_books_data):
+    def __init__(self, book_title, book_author, json_books_data_list):
         self.book_title = book_title
         self.book_author = book_author
-        self.json_books_data = json_books_data
+        self.json_books_data_list = json_books_data_list
         # self.library = []
 
     def show_books(self):
         print("\n-----------------------All of our titles:----------------------------:")
-        for item in self.json_books_data:
+        for item in self.json_books_data_list:
             print("__________________________________________________")
             for key, value in item.items():
                 print(f"{key}: {value}")
 
     def borrow_book(self):
-        for item in self.json_books_data:
+        for item in self.json_books_data_list:
             for key, in item:
                 if item[key] == self.book_title:
                     pass                     #⬅️ Currently here. Trying 2 validate users choice in book & author.
@@ -29,10 +29,10 @@ class Library:
 
 class Book:
     """Title, author, available (boolean)"""
-    def __init__(self, title, author, json_books_data):
+    def __init__(self, title, author, json_books_data_list):
         self.title = title
         self.author = author
-        self.json_books_data = json_books_data
+        self.json_books_data_list = json_books_data_list
 
     def is_available(self):
         pass
@@ -40,9 +40,9 @@ class Book:
 
 class User:
     """Tracks borrowed books"""
-    def __init__(self, user_name, json_books_data):
+    def __init__(self, user_name, json_books_data_list):
         self.user_name = user_name
-        self.json_books_data = json_books_data
+        self.json_books_data_list = json_books_data_list
         self.borrowed_books = {}
 
     def borrow(self):
