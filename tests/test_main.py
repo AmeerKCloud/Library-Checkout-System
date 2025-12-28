@@ -50,16 +50,23 @@ def test_load_books():
 
     with open(json_file_path, "r") as file:
         books = json.load(file)
-    
-    # print("\nLoaded books data:")  
-    # print(books)                                  #⬅️ For testing code purposes
 
     assert len(books) > 0
     return books
 
 
 def update_book_availability(book_id, new_status):
-    pass
+    json_file_path = get_data_file("library_books.json")
+
+    with open(json_file_path, "r") as file:
+        books = json.load(file)
+
+    for book in books:
+        if book["book_id"] == book_id:
+            book["available"] = new_status
+
+    with open("data/library_books.json", "w") as file:
+        json.dump(books, file, indent=2)
 
 
 library = Library(None, None, test_load_books())
