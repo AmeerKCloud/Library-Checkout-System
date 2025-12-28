@@ -56,7 +56,11 @@ def test_load_books():
 
     assert len(books) > 0
     return books
-    
+
+
+def update_book_availability():
+    pass
+
 
 library = Library(None, None, test_load_books())
 

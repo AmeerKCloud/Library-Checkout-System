@@ -24,7 +24,12 @@ class Library:
                 print(f"\n")
                 for key, value in item.items():
                     print(f"{key}: {value}")
+
+                print(f"\nYou have now borrwed {self.book_title}, by {self.book_author}")
                 item["available"] = False
+
+                for key, value in item.items():
+                    print(f"{key}: {value}")
         return self.json_books_data_list
         # print(self.json_books_data_list)
 
