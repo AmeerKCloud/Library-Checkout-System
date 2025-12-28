@@ -58,7 +58,7 @@ def test_load_books():
     return books
 
 
-def update_book_availability():
+def update_book_availability(book_id, new_status):
     pass
 
 
@@ -68,12 +68,12 @@ while True:
     user_option_choice = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
     if user_option_choice == 'b':
-        
+
         title = input("\nBook title:\n").title()
         author = input("\nAuthors name:\n").title()
 
         library = Library(title, author, test_load_books())
-        library.borrow_book()
+        book_id, new_status = library.borrow_book()
     elif user_option_choice == 'r':
         pass
     elif user_option_choice == 'v':
