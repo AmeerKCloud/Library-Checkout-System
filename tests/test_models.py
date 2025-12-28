@@ -34,7 +34,7 @@ class Library:
 
                     for key, value in item.items():
                         print(f"{key}: {value}")
-                    return self.json_books_data_list
+                    return item["book_id"], self.json_books_data_list
 
     def return_book(self):
         pass
