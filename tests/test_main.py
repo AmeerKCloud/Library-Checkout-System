@@ -68,6 +68,8 @@ def update_book_availability(id_book, update_status):
     with open(json_file_path, "w") as file:                     #⬅️ 'w' stands for 'write'?
         json.dump(books, file, indent=2)
 
+    print(books)
+
 
 library = Library(None, None, test_load_books())
 
