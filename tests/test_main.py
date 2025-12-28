@@ -68,6 +68,7 @@ while True:
     user_option_choice = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
     if user_option_choice == 'b':
+        
         title = input("\nBook title:\n").title()
         author = input("\nAuthors name:\n").title()
 
