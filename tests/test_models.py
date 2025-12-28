@@ -21,16 +21,20 @@ class Library:
         """ NOTE: currenlty still here, working on borrowing mechanism/logic."""
         for item in self.json_books_data_list:
             if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only
-                print(f"\n")
-                for key, value in item.items():
-                    print(f"{key}: {value}")
+                if item["available"] == False:
+                    print(f"We're sorry, {self.book_title}, by {self.book_author} is currently unavailable.")
+                    return
+                else:
+                    print(f"\n")
+                    for key, value in item.items():
+                        print(f"{key}: {value}")
 
-                print(f"\nYou have now borrwed {self.book_title}, by {self.book_author}")
-                item["available"] = False
+                    print(f"\nYou have now borrwed {self.book_title}, by {self.book_author}")
+                    item["available"] = False
 
-                for key, value in item.items():
-                    print(f"{key}: {value}")
-        return self.json_books_data_list
+                    for key, value in item.items():
+                        print(f"{key}: {value}")
+                    return self.json_books_data_list
 
     def return_book(self):
         pass
