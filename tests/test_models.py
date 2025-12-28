@@ -25,8 +25,8 @@ class Library:
                 for key, value in item.items():
                     print(f"{key}: {value}")
                 item["available"] = False
-        # return self.json_books_data_list
-        print(self.json_books_data_list)
+        return self.json_books_data_list
+        # print(self.json_books_data_list)
 
     def return_book(self):
         pass
