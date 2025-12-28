@@ -55,15 +55,15 @@ def test_load_books():
     return books
 
 
-def update_book_availability(book_id, new_status):
+def update_book_availability(id_book, update_status):
     json_file_path = get_data_file("library_books.json")
 
     with open(json_file_path, "r") as file:                     #⬅️ 'r' stands for 'read'?
         books = json.load(file)
 
     for book in books:
-        if book["book_id"] == book_id:
-            book["available"] = new_status
+        if book["book_id"] == id_book:
+            book["available"] = update_status
 
     with open(json_file_path, "w") as file:                     #⬅️ 'w' stands for 'write'?
         json.dump(books, file, indent=2)
