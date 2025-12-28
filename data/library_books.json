@@ -1,51 +1,51 @@
 [
-    {
-        "book_id": "B001",
-        "title": "1984",
-        "author": "George Orwell",
-        "genre": "Dystopian",
-        "available": true
-    },
-    {
-        "book_id": "B002",
-        "title": "To Kill a Mockingbird",
-        "author": "Harper Lee",
-        "genre": "Classic",
-        "available": true
-    },
-    {
-        "book_id": "B003",
-        "title": "The Great Gatsby",
-        "author": "F. Scott Fitzgerald",
-        "genre": "Classic",
-        "available": true
-    },
-    {
-        "book_id": "B004",
-        "title": "The Hobbit",
-        "author": "J.R.R. Tolkien",
-        "genre": "Fantasy",
-        "available": true
-    },
-    {
-        "book_id": "B005",
-        "title": "A Brief History of Time",
-        "author": "Stephen Hawking",
-        "genre": "Science",
-        "available": true
-    },
-    {
-        "book_id": "B006",
-        "title": "Clean Code",
-        "author": "Robert C. Martin",
-        "genre": "Programming",
-        "available": true
-    },
-    {
-        "book_id": "B007",
-        "title": "Python Crash Course",
-        "author": "Eric Matthes",
-        "genre": "Programming",
-        "available": true
-    }
+  {
+    "book_id": "B001",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "available": false
+  },
+  {
+    "book_id": "B002",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic",
+    "available": true
+  },
+  {
+    "book_id": "B003",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "available": true
+  },
+  {
+    "book_id": "B004",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "available": true
+  },
+  {
+    "book_id": "B005",
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "genre": "Science",
+    "available": true
+  },
+  {
+    "book_id": "B006",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "available": true
+  },
+  {
+    "book_id": "B007",
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "genre": "Programming",
+    "available": true
+  }
 ]
