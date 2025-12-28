@@ -65,7 +65,7 @@ def update_book_availability(book_id, new_status):
         if book["book_id"] == book_id:
             book["available"] = new_status
 
-    with open("data/library_books.json", "w") as file:
+    with open(json_file_path, "w") as file:
         json.dump(books, file, indent=2)
 
 
