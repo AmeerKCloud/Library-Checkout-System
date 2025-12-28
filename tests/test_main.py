@@ -58,14 +58,14 @@ def test_load_books():
 def update_book_availability(book_id, new_status):
     json_file_path = get_data_file("library_books.json")
 
-    with open(json_file_path, "r") as file:
+    with open(json_file_path, "r") as file:                     #⬅️ 'r' stands for 'read'?
         books = json.load(file)
 
     for book in books:
         if book["book_id"] == book_id:
             book["available"] = new_status
 
-    with open(json_file_path, "w") as file:
+    with open(json_file_path, "w") as file:                     #⬅️ 'w' stands for 'write'?
         json.dump(books, file, indent=2)
 
 
@@ -81,6 +81,7 @@ while True:
 
         library = Library(title, author, test_load_books())
         book_id, new_status = library.borrow_book()
+        update_book_availability(book_id, new_status) 
     elif user_option_choice == 'r':
         pass
     elif user_option_choice == 'v':
