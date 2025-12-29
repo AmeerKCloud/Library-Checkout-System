@@ -23,7 +23,7 @@ class Library:
             if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only
                 if item["available"] == False:
                     print(f"We're sorry, {self.book_title}, by {self.book_author} is currently unavailable.")
-                    return
+                    return None, None
                 else:
                     print(f"\n")
                     for key, value in item.items():
