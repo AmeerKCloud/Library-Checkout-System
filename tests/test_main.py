@@ -83,7 +83,7 @@ while True:
 
         library = Library(title, author, test_load_books())
         book_id, new_status = library.borrow_book()
-        type(book_id, new_status)
+        type(book_id)
         if book_id == None and new_status == None:
             break
         else:
