@@ -92,6 +92,8 @@ while True:
         
         title = input("\nBook title:\n")
         author = input("\nAuthors name:\n")
+
+        library = Library(title, author, test_load_books())
     elif user_option_choice == 'v':
         library.show_books()
     else:
