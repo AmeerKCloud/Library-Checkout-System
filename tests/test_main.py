@@ -89,7 +89,9 @@ while True:
         else:
             update_book_availability(book_id, new_status) 
     elif user_option_choice == 'r':
-        pass
+        
+        title = input("\nBook title:\n")
+        author = input("\nAuthors name:\n")
     elif user_option_choice == 'v':
         library.show_books()
     else:
