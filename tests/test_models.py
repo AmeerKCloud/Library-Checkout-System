@@ -32,6 +32,7 @@ class Library:
                     print(f"\nYou have now borrowed {self.book_title}, by {self.book_author}")
                     item["available"] = False
 
+                    print("\n")
                     for key, value in item.items():
                         print(f"{key}: {value}")
                     return item["book_id"], item["available"]
