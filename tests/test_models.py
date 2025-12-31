@@ -40,6 +40,7 @@ class Library:
     def return_book(self):                                                                  #⬅️ Currently working on this function
         for item in self.json_books_data_list:
             if self.book_title in item.values() and self.book_author in item.values():
+                print("Exists")
                 if item["available"] == False:
                     item["available"] = True
                     print(f"You have now returned {self.book_title}, by {self.book_author}")
