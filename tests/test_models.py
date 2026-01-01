@@ -75,7 +75,7 @@ class User:                                                             #⬅️ 
     def borrow_books(self):
         self.book = {}
 
-        self.book["book_id"] = self.book_id
+        self.book["book_id"] = self.book_id                             #⬅️ Currently working on this funct. in the class
         self.book["title"] = self.title
         self.book["author"] = self.author
         self.book["genre"] = self.genre
