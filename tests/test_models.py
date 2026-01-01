@@ -83,3 +83,10 @@ class User:                                                             #⬅️ 
 
     def returned_books(self):
         pass
+
+
+    # TODO:
+    # Currently trying to build logic in 'borrow_books()' funct
+    # - Logic must create a dict with user name as key and all the books theyve borrowed as keys
+    # - - Find out if nested dict or list with dict is the better solution
+    # - - Find out how to retrieve book info and create a dict to add to the 'borrowed_books' empty dict (or list)
