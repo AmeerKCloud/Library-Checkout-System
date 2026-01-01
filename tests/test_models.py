@@ -72,8 +72,9 @@ class User:                                                             #⬅️ 
         self.json_books_data_list = json_books_data_list
         self.borrowed_books = {}
 
-    def borrow(self):
-        pass
+    def borrowed_books(self):
+        user = {}
 
-    def return_book(self):
+
+    def returned_books(self):
         pass
