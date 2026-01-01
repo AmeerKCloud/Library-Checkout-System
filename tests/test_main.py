@@ -33,7 +33,7 @@
 # - main.py — main loop
 
 
-from test_models import Library
+from test_models import Library, Book
 
 import sys
 import os
@@ -74,9 +74,13 @@ def update_book_availability(id_book, update_status):
 library = Library(None, None, test_load_books())
 
 while True:
-    user_option_choice = input("\nChoose an option: 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
+    user_option_choice = input("\nChoose an option: 'a' for availability, 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
-    if user_option_choice == 'b':
+    if user_option_choice == "a":
+        title = input("\nBook title:\n").title()
+        author = input("\nAuthors name:\n").title()
+        book = Book
+    elif user_option_choice == 'b':
 
         title = input("\nBook title:\n").title()
         author = input("\nAuthors name:\n").title()
