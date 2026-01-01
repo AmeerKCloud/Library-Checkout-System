@@ -80,6 +80,7 @@ while True:
         title = input("\nBook title:\n").title()
         author = input("\nAuthors name:\n").title()
         book = Book(title, author, test_load_books())
+        book.is_available()
 
     elif user_option_choice == 'b':
 

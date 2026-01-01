@@ -58,11 +58,11 @@ class Book:
     def is_available(self):
         for item in self.json_books_data_list:
             if item["title"] == self.title and item["author"] == self.author:
-                print("exists")
+                print("exists")                                                 #⬅️ Forntesting & validation purposes only.
                 if item["available"] == True:
-                    print(f"{self.title}, by {self.author} is currently available")
+                    print(f"\n{self.title}, by {self.author} is currently available")
                 else:
-                    print(f"{self.title}, by {self.author} is currently NOT available")
+                    print(f"\n{self.title}, by {self.author} is currently NOT available")
 
 
 class User:
