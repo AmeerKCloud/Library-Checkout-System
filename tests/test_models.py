@@ -75,8 +75,10 @@ class User:                                                             #⬅️ 
     def borrow_books(self):
         self.book = {}
 
+        self.book["book_id"] = self.book_id
         self.book["title"] = self.title
         self.book["author"] = self.author
+        self.book["genre"] = self.genre
 
 
     def returned_books(self):
