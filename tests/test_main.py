@@ -90,8 +90,8 @@ while True:
             update_book_availability(book_id, new_status) 
     elif user_option_choice == 'r':
         
-        title = input("\nBook title:\n")
-        author = input("\nAuthors name:\n")
+        title = input("\nBook title:\n").title()
+        author = input("\nAuthors name:\n").title()
 
         library = Library(title, author, test_load_books())
         library.return_book()

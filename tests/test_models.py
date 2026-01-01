@@ -18,7 +18,7 @@ class Library:
                 print(f"{key}: {value}")
 
     def borrow_book(self):                                                                  #⬅️ Just completed this funct. Appears to be working as intended.
-        """ NOTE: currenlty still here, working on borrowing mechanism/logic."""
+        """"""
         for item in self.json_books_data_list:
             if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only
                 if item["available"] == False:
@@ -39,6 +39,7 @@ class Library:
 
     def return_book(self):                                                                  #⬅️ Currently working on this function
         for item in self.json_books_data_list:
+            print(item)
             if self.book_title in item.values() and self.book_author in item.values():
                 print("Exists")
                 if item["available"] == False:
