@@ -94,7 +94,8 @@ while True:
         author = input("\nAuthors name:\n").title()
 
         library = Library(title, author, test_load_books())
-        library.return_book()
+        book_id, new_status = library.return_book()
+        update_book_availability(book_id, new_status)
     elif user_option_choice == 'v':
         library.show_books()
     else:
