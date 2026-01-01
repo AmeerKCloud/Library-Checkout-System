@@ -39,7 +39,7 @@ class Library:
 
     def return_book(self):                                                                  #⬅️ Currently working on this function
         for item in self.json_books_data_list:
-            if self.book_title in item.values() and self.book_author in item.values():
+            if item["title"] == self.book_title and item["author"] == self.book_author:
                 print("Exists")
                 if item["available"] == False:
                     item["available"] = True
