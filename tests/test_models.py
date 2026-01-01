@@ -60,9 +60,9 @@ class Book:
             if item["title"] == self.title and item["author"] == self.author:
                 print("exists")                                                 #⬅️ For testing & validation purposes only.
                 if item["available"] == True:
-                    print(f"\n{self.title}, by {self.author} is currently available")
+                    print(f"\n{self.title}, by {self.author} is currently available ✅")
                 else:
-                    print(f"\n{self.title}, by {self.author} is currently NOT available")
+                    print(f"\n{self.title}, by {self.author} is currently NOT available ❌")
 
 
 class User:
