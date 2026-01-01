@@ -44,6 +44,7 @@ class Library:
                 if item["available"] == False:
                     item["available"] = True
                     print(f"You have now returned {self.book_title}, by {self.book_author}")
+                    return item["book_id"], item["available"]
             else:
                 print("NOT exist")
 
