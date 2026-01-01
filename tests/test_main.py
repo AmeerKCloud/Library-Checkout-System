@@ -79,7 +79,8 @@ while True:
     if user_option_choice == "a":
         title = input("\nBook title:\n").title()
         author = input("\nAuthors name:\n").title()
-        book = Book
+        book = Book(title, author, test_load_books())
+
     elif user_option_choice == 'b':
 
         title = input("\nBook title:\n").title()
