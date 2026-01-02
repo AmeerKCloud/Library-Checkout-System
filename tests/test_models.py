@@ -84,6 +84,9 @@ class User:                                                             #⬅️ 
                 self.book["author"] = item["author"]
                 self.book["genre"] = item["genre"]
 
+                self.borrowed_books[self.user_name] = self.book
+            print(self.borrowed_books)
+
 
     def returned_books(self):
         pass
