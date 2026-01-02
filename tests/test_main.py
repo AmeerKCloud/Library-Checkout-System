@@ -71,6 +71,8 @@ def update_book_availability(id_book, update_status):
     print(books)
 
 
+#--------------------------------- Main Program Below ------------------------------------
+
 library = Library(None, None, test_load_books())
 
 while True:
