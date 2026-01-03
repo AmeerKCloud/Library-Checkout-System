@@ -33,7 +33,7 @@
 # - main.py — main loop
 
 
-from test_models import Library, Book
+from test_models import Library, Book, User
 
 import sys
 import os
@@ -90,11 +90,13 @@ while True:
         author = input("\nAuthors name:\n").title()
 
         library = Library(title, author, test_load_books())
+        user = User(title, author)
         book_id, new_status = library.borrow_book()
         
         if book_id == None and new_status == None:
             break
         else:
+            user_name = input("\nPlease enter your name:\n").title()
             update_book_availability(book_id, new_status) 
     elif user_option_choice == 'r':
         

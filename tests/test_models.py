@@ -85,7 +85,8 @@ class User:                                                             #⬅️ 
                 self.book["author"] = item["author"]
                 self.book["genre"] = item["genre"]
 
-                self.user_books_data[self.user_name] = self.book
+                self.borrowed_books_list.append(self.book)
+                self.user_books_data[self.user_name] = self.borrowed_books_list
             print(self.user_books_data)
 
 
