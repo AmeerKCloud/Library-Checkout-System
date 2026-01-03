@@ -58,7 +58,7 @@ class Book:
     def is_available(self):
         for item in self.json_books_data_list:
             if item["title"] == self.title and item["author"] == self.author:
-                print("exists")                                                 #⬅️ For testing & validation purposes only.
+                # print("exists")                                                 #⬅️ For testing & validation purposes only.
                 if item["available"] == True:
                     print(f"\n{self.title}, by {self.author} is currently available ✅")
                 else:
@@ -67,8 +67,8 @@ class Book:
 
 class User:                                                             #⬅️ Currently working on this class.
     """Tracks borrowed books"""
-    def __init__(self, user_name, title, author, json_books_data_list):
-        self.user_name = user_name
+    def __init__(self, u_name, title, author, json_books_data_list):
+        self.u_name = u_name
         self.title = title
         self.author = author
         self.json_books_data_list = json_books_data_list
@@ -86,8 +86,8 @@ class User:                                                             #⬅️ 
                 self.book["genre"] = item["genre"]
 
                 self.borrowed_books_list.append(self.book)
-                self.user_books_data[self.user_name] = self.borrowed_books_list
-            print(self.user_books_data)
+        self.user_books_data[self.u_name] = self.borrowed_books_list
+        print(self.user_books_data)
 
 
     def returned_books(self):
@@ -96,6 +96,6 @@ class User:                                                             #⬅️ 
 
     # TODO:
     # Currently trying to build logic in 'borrow_books()' funct
-    # - Logic must create a dict with user name as key and all the books theyve borrowed as keys
+    # - Logic must create a dict with user name as key and all the books theyve borrowed as dict-list-items inside a list-value
     # - - Find out if nested dict or list with dict is the better solution
     # - - Find out how to retrieve book info and create a dict to add to the 'borrowed_books' empty dict (or list)
