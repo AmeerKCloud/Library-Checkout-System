@@ -97,5 +97,8 @@ class User:                                                             #⬅️ 
     # TODO:
     # Currently trying to build logic in 'borrow_books()' funct
     # - Logic must create a dict with user name as key and all the books theyve borrowed as dict-list-items inside a list-value
-    # - - Find out if nested dict or list with dict is the better solution
+    # - - Find out if nested dict or list with dicts as list-items is the better solution (which is what is currently happening)
     # - - Find out how to retrieve book info and create a dict to add to the 'borrowed_books' empty dict (or list)
+
+    # IMPORTANT: Progress report:
+    # - Currently, list appends new dict with most recent borrowed book info, but loses previous one.
