@@ -40,7 +40,7 @@ class Library:
     def return_book(self):
         for item in self.json_books_data_list:
             if item["title"] == self.book_title and item["author"] == self.book_author:     #⬅️ This way is better & less prone to errors accordint to ChatGPT.
-                print("Exists")
+                # print("Exists")
                 if item["available"] == False:
                     item["available"] = True
                     print(f"You have now returned {self.book_title}, by {self.book_author}")
@@ -85,7 +85,7 @@ class User:                                                             #⬅️ 
                 self.book["author"] = item["author"]
                 self.book["genre"] = item["genre"]
 
-                self.borrowed_books_list.append(self.book)
+        self.borrowed_books_list.append(self.book)
         self.user_books_data[self.u_name] = self.borrowed_books_list
         print(self.user_books_data)
 
