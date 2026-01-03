@@ -72,9 +72,10 @@ class User:                                                             #⬅️ 
         self.title = title
         self.author = author
         self.json_books_data_list = json_books_data_list
-        self.borrowed_books = {}
+        self.user_books_data = {}
 
     def borrow_books(self):
+        self.borrowed_books_list = []
         self.book = {}
 
         for item in self.json_books_data_list:
@@ -84,8 +85,8 @@ class User:                                                             #⬅️ 
                 self.book["author"] = item["author"]
                 self.book["genre"] = item["genre"]
 
-                self.borrowed_books[self.user_name] = self.book
-            print(self.borrowed_books)
+                self.user_books_data[self.user_name] = self.book
+            print(self.user_books_data)
 
 
     def returned_books(self):
