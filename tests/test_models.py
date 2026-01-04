@@ -77,7 +77,7 @@ class User:                                                             #⬅️ 
     def borrow_books(self):
         self.borrowed_books_list = []
         self.user_books_data[self.u_name] = self.borrowed_books_list
-        self.book = {}
+        self.book = {}                                                      #⬅️ The list item dict.
 
         for item in self.json_books_data_list:
             if item["title"] == self.title and item["author"] == self.author:
