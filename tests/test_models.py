@@ -75,7 +75,7 @@ class User:                                                             #⬅️ 
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
     def borrow_books(self):
-        self.borrowed_books_list = []
+        self.borrowed_books_list = []                                          #⬅️ The empty list.
         self.user_books_data[self.u_name] = self.borrowed_books_list           #⬅️ The list as a value in the main dict.
         self.book = {}                                                         #⬅️ The list item dict.
 
