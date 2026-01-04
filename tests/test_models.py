@@ -73,14 +73,11 @@ class User:                                                             #⬅️ 
         self.author = author
         self.json_books_data_list = json_books_data_list
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
-        self.borrowed_books_list = []
-        self.user_books_data[self.u_name] = self.borrowed_books_list           #⬅️ The list as a value in the main dict.
-        self.book = {}  
 
     def borrow_books(self):
-        # self.borrowed_books_list = []
-        # self.user_books_data[self.u_name] = self.borrowed_books_list           #⬅️ The list as a value in the main dict.
-        # self.book = {}                                                         #⬅️ The list item dict.
+        self.borrowed_books_list = []
+        self.user_books_data[self.u_name] = self.borrowed_books_list           #⬅️ The list as a value in the main dict.
+        self.book = {}                                                         #⬅️ The list item dict.
 
         for item in self.json_books_data_list:
             if item["title"] == self.title and item["author"] == self.author:
