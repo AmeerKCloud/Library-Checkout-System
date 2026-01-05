@@ -72,8 +72,7 @@ class User:                                                             #⬅️ 
         self.json_books_data_list = json_books_data_list
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
-        # ⬇️ Create the user's list ONCE
-        self.user_books_data[self.u_name] = []                                 #⬅️ The empty list.
+        self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
 
     def borrow_books(self, title, author):
         for item in self.json_books_data_list:
@@ -84,6 +83,8 @@ class User:                                                             #⬅️ 
                     "author": item["author"],
                     "genre": item["genre"]
                 }
+
+
         print(self.user_books_data)
 
 
