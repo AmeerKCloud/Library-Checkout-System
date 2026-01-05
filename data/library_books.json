@@ -4,7 +4,7 @@
     "title": "1984",
     "author": "George Orwell",
     "genre": "Dystopian",
-    "available": false
+    "available": true
   },
   {
     "book_id": "B002",
@@ -25,7 +25,7 @@
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy",
-    "available": false
+    "available": true
   },
   {
     "book_id": "B005",

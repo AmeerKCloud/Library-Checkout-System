@@ -77,18 +77,32 @@ class User:                                                             #⬅️ 
     def borrow_books(self, title, author):
         for key in self.user_books_data:
             if key == self.u_name:
-        for item in self.json_books_data_list:
-            if item["title"] == title and item["author"] == author:
-                book = {
-                    "book_id": item["book_id"],
-                    "title": item["title"],
-                    "author": item["author"],
-                    "genre": item["genre"]
-                }
+                for item in self.json_books_data_list:
+                    if item["title"] == title and item["author"] == author:
+                        book = {
+                            "book_id": item["book_id"],
+                            "title": item["title"],
+                            "author": item["author"],
+                            "genre": item["genre"]
+                        }
 
-                self.user_books_data[self.u_name].append(book)
-                print(f"\nBorrowed {title}, by author {author}.")
-                break
+                        self.user_books_data[key].append(book)
+                        print(f"\nMember {self.u_name} added.")
+                        print(f"Borrowed {title}, by author {author}.")
+                        break
+            else:
+                for item in self.json_books_data_list:
+                    if item["title"] == title and item["author"] == author:
+                        book = {
+                            "book_id": item["book_id"],
+                            "title": item["title"],
+                            "author": item["author"],
+                            "genre": item["genre"]
+                        }
+
+                        self.user_books_data[self.u_name].append(book)
+                        print(f"\nBorrowed {title}, by author {author}.")
+                        break
 
         print(self.user_books_data)
 
