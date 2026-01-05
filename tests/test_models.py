@@ -84,6 +84,9 @@ class User:                                                             #⬅️ 
                     "genre": item["genre"]
                 }
 
+                self.user_books_data[self.u_name].append(book)
+                print(f"Borrow {title}, by author {author}.")
+                break
 
         print(self.user_books_data)
 
