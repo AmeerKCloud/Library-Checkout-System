@@ -75,6 +75,8 @@ class User:                                                             #⬅️ 
         self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
 
     def borrow_books(self, title, author):
+        for key in self.user_books_data:
+            if key == self.u_name:
         for item in self.json_books_data_list:
             if item["title"] == title and item["author"] == author:
                 book = {
@@ -85,7 +87,7 @@ class User:                                                             #⬅️ 
                 }
 
                 self.user_books_data[self.u_name].append(book)
-                print(f"Borrow {title}, by author {author}.")
+                print(f"\nBorrowed {title}, by author {author}.")
                 break
 
         print(self.user_books_data)

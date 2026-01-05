@@ -96,8 +96,8 @@ while True:
             break
         else:
             user_name = input("\nPlease enter your name:\n").title()
-            user = User(user_name, title, author, test_load_books())
-            user.borrow_books()
+            user = User(user_name, test_load_books())
+            user.borrow_books(title, author)
             update_book_availability(book_id, new_status) 
     elif user_option_choice == 'r':
         
