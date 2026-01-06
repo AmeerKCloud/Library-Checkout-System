@@ -72,8 +72,8 @@ class User:                                                             #⬅️ 
         self.json_books_data_list = json_books_data_list
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
-        for key in self.user_books_data:                                    #⬅️ If user not already in dict. data, then create username key & assign list as value
-            if key != self.u_name:
+        for key in self.user_books_data:
+            if key != self.u_name:                                          #⬅️ If user not already in dict. data, then create username key & assign list as value
                 self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
 
     def borrow_books(self, title, author):
