@@ -81,19 +81,20 @@ class User:                                                             #⬅️ 
             self.user_books_data[self.u_name] = []
 
     def borrow_books(self, title, author):
-        for item in self.json_books_data_list:
-            if item["title"] == title and item["author"] == author:
-                # Create a NEW book dict each time
-                book = {
-                    "book_id": item["book_id"],
-                    "title": item["title"],
-                    "author": item["author"],
-                    "genre": item["genre"]
-                }
+        if self.u_name in self.user_books_data:
+            for item in self.json_books_data_list:
+                if item["title"] == title and item["author"] == author:
+                    # Create a NEW book dict each time
+                    book = {
+                        "book_id": item["book_id"],
+                        "title": item["title"],
+                        "author": item["author"],
+                        "genre": item["genre"]
+                    }
 
-                self.user_books_data[self.u_name].append(book)
-                print(f"Borrowed: {title} by {author}")
-                break
+                    self.user_books_data[self.u_name].append(book)
+                    print(f"Borrowed: {title} by {author}")
+                    break
         print(self.user_books_data)
 
 
@@ -109,6 +110,9 @@ class User:                                                             #⬅️ 
 
     # IMPORTANT: Progress report:
     # - Currently, list appends new dict with most recent borrowed book info, but loses previous one.
+    # - - Trying to resolve this, by checking the main data dict if username already exists as a key
+    # - - - If it does, then proceed to just append the new book title to the already existing users book-list
+    # - - - Else, create the new username key and corresponding empty list and append the first book title to the list.
 
 
 
