@@ -74,6 +74,7 @@ class User:                                                             #⬅️ 
 
         for key in self.user_books_data:
             if key != self.u_name:                                          #⬅️ If user not already in dict. data, then create username key & assign list as value
+                print(f"\n{self.u_name} just added.")
                 self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
 
     def borrow_books(self, title, author):
