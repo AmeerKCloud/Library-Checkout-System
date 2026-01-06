@@ -88,6 +88,7 @@ class User:                                                             #⬅️ 
                 self.user_books_data[self.u_name].append(book)
                 print(f"Borrowed: {title} by {author}")
                 break
+        print(self.user_books_data)
 
 
     def returned_books(self):
