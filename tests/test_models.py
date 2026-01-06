@@ -72,7 +72,9 @@ class User:                                                             #⬅️ 
         self.json_books_data_list = json_books_data_list
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
-        self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
+        for key in self.user_books_data:                                    #⬅️ If user not already in dict. data, then create username key & assign list as value
+            if key != self.u_name:
+                self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
 
     def borrow_books(self, title, author):
         for item in self.json_books_data_list:
@@ -103,3 +105,36 @@ class User:                                                             #⬅️ 
 
     # IMPORTANT: Progress report:
     # - Currently, list appends new dict with most recent borrowed book info, but loses previous one.
+
+
+
+    # _________ Reserve code:__________:
+
+    # class User:                                                             #⬅️ Currently working on this class.
+    #     """Tracks borrowed books"""
+    # def __init__(self, u_name, json_books_data_list):
+    #     self.u_name = u_name
+    #     self.json_books_data_list = json_books_data_list
+    #     self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
+
+    #     self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
+
+    # def borrow_books(self, title, author):
+    #     for item in self.json_books_data_list:
+    #         if item["title"] == title and item["author"] == author:
+    #             # Create a NEW book dict each time
+    #             book = {
+    #                 "book_id": item["book_id"],
+    #                 "title": item["title"],
+    #                 "author": item["author"],
+    #                 "genre": item["genre"]
+    #             }
+
+    #             self.user_books_data[self.u_name].append(book)
+    #             print(f"Borrowed: {title} by {author}")
+    #             break
+    #     print(self.user_books_data)
+
+
+    # def returned_books(self):
+    #     pass
