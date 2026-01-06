@@ -72,10 +72,11 @@ class User:                                                             #⬅️ 
         self.json_books_data_list = json_books_data_list
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
-        self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
+        # self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
 
     def borrow_books(self, title, author):
         if not self.user_books_data[self.u_name]:
+            self.user_books_data[self.u_name] = []
             for item in self.json_books_data_list:
                 if item["title"] == title and item["author"] == author:
                     book = {
