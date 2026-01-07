@@ -39,7 +39,7 @@ class Library:
 
     def return_book(self):
         for item in self.json_books_data_list:
-            if item["title"] == self.book_title and item["author"] == self.book_author:     #⬅️ This way is better & less prone to errors accordint to ChatGPT.
+            if item["title"] == self.book_title and item["author"] == self.book_author:     #⬅️ This way is better & less prone to errors according to ChatGPT.
                 # print("Exists")
                 if item["available"] == False:
                     item["available"] = True
