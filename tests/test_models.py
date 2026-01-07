@@ -73,6 +73,7 @@ class User:                                                             #⬅️ 
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
         if not self.u_name in self.user_books_data:
+            print(f"\nJust added {self.u_name}")
             self.user_books_data[self.u_name] = []
 
     def borrow_books(self, title, author):
