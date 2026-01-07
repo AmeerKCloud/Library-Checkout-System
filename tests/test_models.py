@@ -96,6 +96,7 @@ class User:                                                             #⬅️ 
                 print(f"Borrowed: {title} by {author}")
                 break
         print(User.user_books_data)
+        return User.user_books_data
 
 
     def returned_books(self):
