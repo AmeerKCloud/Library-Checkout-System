@@ -67,6 +67,8 @@ class Book:
 
 class User:                                                             #⬅️ Currently working on this class.
     """Tracks borrowed books"""
+
+    #⬇️'user_books_data' is a class variable. A class variable belongs to the class itself, not individual objects, & can be sahred by all objects
     user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
     def __init__(self, u_name, json_books_data_list):
