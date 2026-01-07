@@ -113,8 +113,9 @@ class User:                                                             #⬅️ 
 # - - Trying to resolve this, by checking the main data dict if username already exists as a key
 # - - - If it does, then proceed to just append the new book title to the already existing users book-list
 # - - - Else, create the new username key and corresponding empty list and append the first book title to the list.
-# NOTE: This problem has been resoled:
-# The issue was that the main data dict. was created as an instance variable (self.)
+# NOTE: This problem has now been resoled ✅:
+# The issue was that the main data dict. was created as an instance variable using 'self.', ie (self.user_books_data)
+# - This means that it is exclusive to only one object at a time when that object is created
 
 
 
