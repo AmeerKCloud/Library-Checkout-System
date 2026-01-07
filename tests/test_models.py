@@ -103,9 +103,6 @@ class User:                                                             #⬅️ 
 
 
 # TODO:
-# If username currently is not key in user_books_data
-
-
 # Currently trying to build logic in 'borrow_books()' funct
 # - Logic must create a dict with user name as key and all the books theyve borrowed as dict-list-items inside a list-value
 # - - Find out if nested dict or list with dicts as list-items is the better solution (which is what is currently happening)
