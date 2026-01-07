@@ -118,6 +118,7 @@ class User:                                                             #⬅️ 
 # - This means that it is exclusive to only one object at a time when that object is created, & cannot be shared by multiple objects
 # - An instance variable belongs to one specific object created from a class. Each object gets its own copy.
 # ✅ The solution in this case was to initiate the data dict as a 'class variable' without the 'self.', ie (user_books_data = {})
+# - A class variable belongs to the class itself, not individual objects. All objects share the same value. 
 
 
 
