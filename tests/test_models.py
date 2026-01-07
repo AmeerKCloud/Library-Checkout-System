@@ -114,11 +114,21 @@ class User:                                                             #⬅️ 
 # - - - If it does, then proceed to just append the new book title to the already existing users book-list
 # - - - Else, create the new username key and corresponding empty list and append the first book title to the list.
 
+# Use instance variables when:
+# - data belongs to one specific object
+# - each object should have unique values
+
+# Examples:
+# - a user’s name
+# - a bank account balance
+# - a playlist’s songs
+# - a student’s grades
+
 # NOTE: The above mentioned problem has now been resoled ✅:
-# ❌ The issue was that the main data dict. was created as an 'instance variable' using 'self.', ie (self.user_books_data)
+# ❌ The issue in this use-case was that the main data dict. was created as an 'instance variable' using 'self.', ie (self.user_books_data)
 # - This means that it is exclusive to only one object at a time when that object is created, & cannot be shared by multiple objects
 # - An instance variable belongs to one specific object created from a class. Each object gets its own copy.
-# ✅ The solution in this case was to initiate the data dict as a 'class variable' without the 'self.', ie (user_books_data = {})
+# ✅ The solution in this use-case was to initiate the data dict as a 'class variable' without the 'self.', ie (user_books_data = {})
 # - A class variable belongs to the class itself, not individual objects. All objects share the same value. 
 
 # Use class variables when:
