@@ -72,16 +72,11 @@ class User:                                                             #⬅️ 
         self.json_books_data_list = json_books_data_list
         self.user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
-        if self.user_books_data:
-            for key in self.user_books_data:
-                if key != self.u_name:                       #⬅️ If user not already in dict. data, then create username key & assign list as value
-                    print(f"\n{self.u_name} just added.")
-                    self.user_books_data[self.u_name] = []                                 #⬅️ Create the user's list ONCE.
-        else:
-            self.user_books_data[self.u_name] = []
+        # self.user_books_data[self.u_name] = []
 
     def borrow_books(self, title, author):
-        if self.u_name in self.user_books_data:
+        if not self.u_name in self.user_books_data:
+            self.user_books_data[self.u_name] = []
             for item in self.json_books_data_list:
                 if item["title"] == title and item["author"] == author:
                     # Create a NEW book dict each time
@@ -95,6 +90,20 @@ class User:                                                             #⬅️ 
                     self.user_books_data[self.u_name].append(book)
                     print(f"Borrowed: {title} by {author}")
                     break
+            else:
+                for item in self.json_books_data_list:
+                    if item["title"] == title and item["author"] == author:
+                        # Create a NEW book dict each time
+                        book = {
+                            "book_id": item["book_id"],
+                            "title": item["title"],
+                            "author": item["author"],
+                            "genre": item["genre"]
+                        }
+
+                        self.user_books_data[self.u_name].append(book)
+                        print(f"Borrowed: {title} by {author}")
+                        break
         print(self.user_books_data)
 
 
