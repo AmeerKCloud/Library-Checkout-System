@@ -72,8 +72,10 @@ class User:                                                             #⬅️ 
     user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
 
     def __init__(self, u_name, json_books_data_list):
-        self.u_name = u_name
-        self.json_books_data_list = json_books_data_list
+
+        #⬇️ An instance variable belongs to one specific object created from a class. Each object gets its own copy.
+        self.u_name = u_name                                  #⬅️ instance variable
+        self.json_books_data_list = json_books_data_list      #⬅️ instance variable
 
         if not self.u_name in self.user_books_data:
             print(f"\nJust added {self.u_name}")
