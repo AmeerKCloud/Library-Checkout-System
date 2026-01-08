@@ -37,7 +37,7 @@ class Library:
                         print(f"{key}: {value}")
                     return item["book_id"], item["available"]
             else:
-                print("\n Sorry, that title or author does not match any in our records.")
+                print("\n☹️ Sorry, that title or author does not match any in our records.")
                 return False, False
 
     def return_book(self):
