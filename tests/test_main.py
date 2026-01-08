@@ -92,7 +92,7 @@ while True:
         library = Library(title, author, test_load_books())
         book_id, new_status = library.borrow_book()
         
-        if book_id == 0 and new_status == 0:
+        if book_id == False and new_status == False:
             break
         else:
             user_name = input("\nPlease enter your name:\n").title()
