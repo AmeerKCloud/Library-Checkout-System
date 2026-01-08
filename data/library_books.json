@@ -2,50 +2,50 @@
   {
     "book_id": "B001",
     "title": "1984",
-    "author": "George Orwell",
-    "genre": "Dystopian",
+    "author": "GEORGE ORWELL",
+    "genre": "DYSTOPIAN",
     "available": true
   },
   {
     "book_id": "B002",
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "genre": "Classic",
+    "title": "TO KILL A MOCKINGBIRD",
+    "author": "HARPER LEE",
+    "genre": "CLASSIC",
     "available": true
   },
   {
     "book_id": "B003",
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "genre": "Classic",
+    "title": "THE GREAT GATSBY",
+    "author": "F. SCOTT FITZGERALD",
+    "genre": "CLASSIC",
     "available": true
   },
   {
     "book_id": "B004",
-    "title": "The Hobbit",
-    "author": "J.R.R. Tolkien",
-    "genre": "Fantasy",
+    "title": "THE HOBBIT",
+    "author": "J.R.R. TOLKIEN",
+    "genre": "FANTASY",
     "available": true
   },
   {
     "book_id": "B005",
-    "title": "A Brief History Of Time",
-    "author": "Stephen Hawking",
-    "genre": "Science",
+    "title": "A BRIEF HISTORY OF TIME",
+    "author": "STEPHEN HAWKING",
+    "genre": "SCIENCE",
     "available": true
   },
   {
     "book_id": "B006",
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "genre": "Programming",
+    "title": "CLEAN CODE",
+    "author": "ROBERT C. MARTIN",
+    "genre": "PROGRAMMING",
     "available": true
   },
   {
     "book_id": "B007",
-    "title": "Python Crash Course",
-    "author": "Eric Matthes",
-    "genre": "Programming",
+    "title": "PYTHON CRASH COURSE",
+    "author": "ERIC MATTHES",
+    "genre": "PROGRAMMING",
     "available": true
   }
 ]
