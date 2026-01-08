@@ -24,7 +24,8 @@ class Library:
         while len_book_list > 0:
             print(f"\nSearching for {self.book_title.title()}, by {self.book_author.title()}...")
             for item in self.json_books_data_list:
-                len_book_list =- 1
+                len_book_list -= 1
+                print(f"Books left to check: {len_book_list}")                             #⬅️ For testing & validation purposes only.
                 if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only, prone to errors?
                     if item["available"] == False:
                         print(f"We're sorry, {self.book_title}, by {self.book_author} is currently unavailable.")
