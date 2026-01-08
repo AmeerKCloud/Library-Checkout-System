@@ -34,7 +34,7 @@ class Library:
                         for key, value in item.items():
                             print(f"{key}: {value}")
 
-                        print(f"\nYou have now borrowed {self.book_title}, by {self.book_author}")
+                        print(f"\nYou have now borrowed {self.book_title.title()}, by {self.book_author.title()}")
                         item["available"] = False
 
                         print("\n")
