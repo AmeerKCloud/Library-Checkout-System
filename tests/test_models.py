@@ -36,8 +36,6 @@ class Library:
                     for key, value in item.items():
                         print(f"{key}: {value}")
                     return item["book_id"], item["available"]
-            else:
-                print("\n☹️ Sorry, that title or author does not match any in our records.")
 
     def return_book(self):
         for item in self.json_books_data_list:
