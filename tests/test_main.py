@@ -86,8 +86,8 @@ while True:
 
     elif user_option_choice == 'b':
 
-        title = input("\nBook title:\n").title()
-        author = input("\nAuthors name:\n").title()
+        title = input("\nBook title:\n").upper()
+        author = input("\nAuthors name:\n").upper()
 
         library = Library(title, author, test_load_books())
         book_id, new_status = library.borrow_book()
