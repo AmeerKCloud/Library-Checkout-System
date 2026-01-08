@@ -19,24 +19,24 @@ class Library:
 
     def borrow_book(self):                                                                  #⬅️ Just completed this funct. Appears to be working as intended.
         """Borrow books."""
+        while True:
+            for item in self.json_books_data_list:
+                if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only, prone to errors?
+                    if item["available"] == False:
+                        print(f"We're sorry, {self.book_title}, by {self.book_author} is currently unavailable.")
+                        return False, False
+                    else:
+                        print(f"\n")
+                        for key, value in item.items():
+                            print(f"{key}: {value}")
 
-        for item in self.json_books_data_list:
-            if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only, prone to errors?
-                if item["available"] == False:
-                    print(f"We're sorry, {self.book_title}, by {self.book_author} is currently unavailable.")
-                    return False, False
-                else:
-                    print(f"\n")
-                    for key, value in item.items():
-                        print(f"{key}: {value}")
+                        print(f"\nYou have now borrowed {self.book_title}, by {self.book_author}")
+                        item["available"] = False
 
-                    print(f"\nYou have now borrowed {self.book_title}, by {self.book_author}")
-                    item["available"] = False
-
-                    print("\n")
-                    for key, value in item.items():
-                        print(f"{key}: {value}")
-                    return item["book_id"], item["available"]
+                        print("\n")
+                        for key, value in item.items():
+                            print(f"{key}: {value}")
+                        return item["book_id"], item["available"]
 
     def return_book(self):
         for item in self.json_books_data_list:
