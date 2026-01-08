@@ -43,9 +43,9 @@ class Library:
                             print(f"{key}: {value}")
                         return item["book_id"], item["available"]
             if len_book_list == 0:
-                print(f"\nSorry, we were unable to find {self.book_title}, by {self.book_author}.")
+                print(f"\nSorry, we were unable to find {self.book_title.title()}, by {self.book_author.title()}.")
                 print("Perhaps check your spelling or review our available list?")
-                break
+                return False, False
 
     def return_book(self):
         for item in self.json_books_data_list:
