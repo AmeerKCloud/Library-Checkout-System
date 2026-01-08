@@ -18,7 +18,8 @@ class Library:
                 print(f"{key}: {value}")
 
     def borrow_book(self):                                                                  #⬅️ Just completed this funct. Appears to be working as intended.
-        """"""
+        """Borrow books."""
+
         for item in self.json_books_data_list:
             if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only, prone to errors?
                 if item["available"] == False:
@@ -161,12 +162,13 @@ class User:                                                             #⬅️ 
 #                 print(f"{key}: {value}")
 
 #     def borrow_book(self):                                                                  #⬅️ Just completed this funct. Appears to be working as intended.
-#         """"""
+#         """Borrow books."""
+        
 #         for item in self.json_books_data_list:
 #             if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only, prone to errors?
 #                 if item["available"] == False:
 #                     print(f"We're sorry, {self.book_title}, by {self.book_author} is currently unavailable.")
-#                     return None, None
+#                     return False, False
 #                 else:
 #                     print(f"\n")
 #                     for key, value in item.items():
