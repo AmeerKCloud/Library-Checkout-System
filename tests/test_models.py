@@ -19,7 +19,11 @@ class Library:
 
     def borrow_book(self):                                                                  #⬅️ Just completed this funct. Appears to be working as intended.
         """Borrow books."""
-        while True:
+        len_book_list = len(self.json_books_data_list)
+
+        while len_book_list > 0:
+            len_book_list =- 1
+            print(f"\nSearching for {self.book_title}, by {self.book_author}...")
             for item in self.json_books_data_list:
                 if self.book_title in item.values() and self.book_author in item.values():      #⬅️ '.values()' specifically seeks dict. values only, prone to errors?
                     if item["available"] == False:
@@ -37,6 +41,10 @@ class Library:
                         for key, value in item.items():
                             print(f"{key}: {value}")
                         return item["book_id"], item["available"]
+            if len_book_list == 0:
+                print(f"\nSorry, we were unable to find {self.book_title}, by {self.book_author}.")
+                print("Perhaps check your spelling or review our available list?")
+                break
 
     def return_book(self):
         for item in self.json_books_data_list:
