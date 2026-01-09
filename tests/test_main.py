@@ -79,8 +79,8 @@ while True:
     user_option_choice = input("\nChoose an option: 'a' for availability, 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
     if user_option_choice == "a":
-        title = input("\nBook title:\n").title()
-        author = input("\nAuthors name:\n").title()
+        title = input("\nBook title:\n").upper()
+        author = input("\nAuthors name:\n").upper()
         book = Book(title, author, test_load_books())
         book.is_available()
 
