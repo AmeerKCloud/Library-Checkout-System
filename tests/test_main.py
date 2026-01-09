@@ -108,6 +108,10 @@ while True:
         library = Library(title, author, test_load_books())
         book_id, new_status = library.return_book()
         update_book_availability(book_id, new_status)
+        user_name = input("\nPlease enter your name:\n").title()
+        user = User(user_name, test_load_books())
+        user.returned_books(title, author)
+
     elif user_option_choice == 'v':
         library.show_books()
     else:
