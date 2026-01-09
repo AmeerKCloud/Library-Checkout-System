@@ -76,7 +76,8 @@ class User:                                                             #⬅️ 
     """Tracks borrowed books"""
 
     #⬇️'user_books_data' initiated as a class variable. A class variable belongs to the class itself, not individual objects, & can be shared by all objects
-    user_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
+    user_borrowed_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
+    user_returned_books_data = {}
 
     def __init__(self, u_name, json_books_data_list):
 
@@ -84,9 +85,9 @@ class User:                                                             #⬅️ 
         self.u_name = u_name                                  #⬅️ instance variable
         self.json_books_data_list = json_books_data_list      #⬅️ instance variable
 
-        if not self.u_name in self.user_books_data:
+        if not self.u_name in self.user_borrowed_books_data:
             print(f"\nJust added {self.u_name}")
-            User.user_books_data[self.u_name] = []
+            User.user_borrowed_books_data[self.u_name] = []
 
     def borrow_books(self, title, author):
         for item in self.json_books_data_list:
@@ -99,11 +100,11 @@ class User:                                                             #⬅️ 
                     "genre": item["genre"]
                 }
 
-                User.user_books_data[self.u_name].append(book)
+                User.user_borrowed_books_data[self.u_name].append(book)
                 print(f"Borrowed: {title} by {author}")
                 break
-        print(User.user_books_data)
-        return User.user_books_data
+        print(User.user_borrowed_books_data)
+        return User.user_borrowed_books_data
 
 
     def returned_books(self):
