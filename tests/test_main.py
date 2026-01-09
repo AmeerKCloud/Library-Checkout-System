@@ -99,6 +99,7 @@ while True:
             user = User(user_name, test_load_books())
             user.borrow_books(title, author)
             update_book_availability(book_id, new_status) 
+
     elif user_option_choice == 'r':
         
         title = input("\nBook title:\n").upper()
