@@ -81,37 +81,30 @@ while True:
     user_option_choice = input("\nChoose an option: 'a' for availability, 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
     if user_option_choice == "a":
-        # title = input("\nBook title:\n").upper()
-        # author = input("\nAuthors name:\n").upper()
         book = Book(user_inputs.book_title(), user_inputs.book_author(), test_load_books())
         book.is_available()
 
     elif user_option_choice == 'b':
 
-        title = input("\nBook title:\n").upper()
-        author = input("\nAuthors name:\n").upper()
-
-        library = Library(title, author, test_load_books())
+        library = Library(user_inputs.book_title(), user_inputs.book_author(), test_load_books())
         book_id, new_status = library.borrow_book()
         
         if book_id == False and new_status == False:
             break
         else:
-            user_name = input("\nPlease enter your name:\n").title()
-            user = User(user_name, test_load_books())
+            user = User(user_inputs.user_name(), test_load_books())
             user.borrow_books(title, author)
             update_book_availability(book_id, new_status) 
 
     elif user_option_choice == 'r':
-        
-        title = input("\nBook title:\n").upper()
-        author = input("\nAuthors name:\n").upper()
+
+        title = user_inputs.book_title()
+        author = user_inputs.book_author()
 
         library = Library(title, author, test_load_books())
         book_id, new_status = library.return_book()
         update_book_availability(book_id, new_status)
-        user_name = input("\nPlease enter your name:\n").title()
-        user = User(user_name, test_load_books())
+        user = User(user_inputs.user_name(), test_load_books())
         user.returned_books(title, author)
 
     elif user_option_choice == 'v':
