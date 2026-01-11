@@ -25,12 +25,25 @@ class UserInputs:
             self.title = input("\nBook title:\n").upper()
             if self.title != "":
                 return self.title
+            else:
+                print("❌ Field cannot be blank.")
 
     def book_author(self):
-        self.author = input("\nAuthors name:\n").upper()
+        while True:
+            self.author = input("\nAuthors name:\n").upper()
+            if self.author != "":
+                return self.author
+            else:
+                print("❌ Field cannot be blank.")
 
     def user_name(self):
-        self.u_name = input("\nPlease enter your name:\n").title()
+        while True:
+            self.u_name = input("\nPlease enter your name:\n").title()
+            if self.u_name != "":
+                return self.u_name
+            else:
+                print("❌ Field cannot be blank.")
+        
 
 
 
