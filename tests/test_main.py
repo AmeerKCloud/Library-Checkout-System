@@ -78,13 +78,16 @@ library = Library(None, None, test_load_books())
 user_inputs = UserInputs()
 
 while True:
-    user_option_choice = input("\nChoose an option: 'a' for availability, 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
 
-    if user_option_choice == "a":
+    user_option_choice_1 = input("\nChoose an option:\n'a' for creating a new transaction \n'b' for viewing all previous transactions:").lower()
+
+    user_option_choice_2 = input("\nChoose an option: 'a' for availability, 'b' for borrow, 'r' for return, 'v' for viewing titles, or 'e' for exit:\n").lower()
+
+    if user_option_choice_2 == "a":
         book = Book(user_inputs.book_title(), user_inputs.book_author(), test_load_books())
         book.is_available()
 
-    elif user_option_choice == 'b':
+    elif user_option_choice_2 == 'b':
 
         title = user_inputs.book_title()
         author = user_inputs.book_author()
@@ -99,7 +102,7 @@ while True:
             user.borrow_books(title, author)
             update_book_availability(book_id, new_status) 
 
-    elif user_option_choice == 'r':
+    elif user_option_choice_2 == 'r':
 
         title = user_inputs.book_title()
         author = user_inputs.book_author()
@@ -110,7 +113,7 @@ while True:
         user = User(user_inputs.user_name(), test_load_books())
         user.returned_books(title, author)
 
-    elif user_option_choice == 'v':
+    elif user_option_choice_2 == 'v':
         library.show_books()
     else:
         break
