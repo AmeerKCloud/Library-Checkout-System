@@ -78,6 +78,8 @@ library = Library(None, None, test_load_books())
 user_inputs = UserInputs()
 
 while True:
+    user_name = user_inputs.user_name()
+    user = User(user_name, test_load_books())
 
     user_option_choice_1 = input("\nChoose an option:\n'a' for creating a new transaction \n'b' for viewing all previous transactions \n'e' to exit:\n").lower()
 
@@ -100,7 +102,6 @@ while True:
             if book_id == False and new_status == False:
                 break
             else:
-                user = User(user_inputs.user_name(), test_load_books())
                 user.borrow_books(title, author)
                 update_book_availability(book_id, new_status) 
 
@@ -112,7 +113,6 @@ while True:
             library = Library(title, author, test_load_books())
             book_id, new_status = library.return_book()
             update_book_availability(book_id, new_status)
-            user = User(user_inputs.user_name(), test_load_books())
             user.returned_books(title, author)
 
         elif user_option_choice_2 == 'v':
@@ -120,8 +120,7 @@ while True:
         else:
             break
 
-    elif user_option_choice_1 == "b":
-        user = User(user_inputs.user_name(), test_load_books())                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books
+    elif user_option_choice_1 == "b":                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books
         print(user.user_returned_books_data)
 
     keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
