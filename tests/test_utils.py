@@ -21,7 +21,10 @@ class UserInputs:
         self.u_name = None
 
     def book_title(self):
-        self.title = input("\nBook title:\n").upper()
+        while True:
+            self.title = input("\nBook title:\n").upper()
+            if self.title != "":
+                return self.title
 
     def book_author(self):
         self.author = input("\nAuthors name:\n").upper()
