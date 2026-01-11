@@ -120,6 +120,9 @@ while True:
         else:
             break
 
+    elif user_option_choice_1 == "b":
+        user = User()
+
     keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
 
     if keep_going == 'e':
