@@ -127,3 +127,13 @@ while True:
 # TODO:
 # - Refactor code to improve modularity and separation of concerns
 # - Add error handling for file operations and user inputs
+
+# Currently program does not catch irrelevant user inputs, like random gibberish
+# - Create functionality that checks for this in the 'test_utils.py' file
+
+# Currently user is unable to view their borrowed or returned books history
+# - Give the 'test_menu.py' program functionality that allows this
+# - Perhaps an if/else statement that lets the user choose from two options:
+# - - Option 'a' lets him create a new transaction (the already existed menu)
+# - - Option 'b' lets him check all previous transactions (borrowed/returned books)
+# - - - Book(s) borrowed, date they were borrowed. Book(s) returned, date they were returned.
