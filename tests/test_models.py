@@ -87,7 +87,7 @@ class User:                                                             #⬅️ 
 
         if not self.u_name in self.user_borrowed_books_data:
             print(f"\nJust added {self.u_name}")
-            User.user_borrowed_books_data[self.u_name] = []
+            User.user_borrowed_books_data[self.u_name] = []         #⬅️ User name as key: empty list as value to that key
 
     def borrow_books(self, title, author):
         for item in self.json_books_data_list:
