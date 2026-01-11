@@ -1,7 +1,7 @@
 # Utility helper functions shared across the project.
 # Includes reusable input validation, formatting, and helper logic.
 
-# NOTE: See breakdown + explanation of below code at the end of this file.
+# NOTE: See breakdown + explanation of below code for importing JSON file data at the end of this file.
 
 import os
 
@@ -15,7 +15,7 @@ def get_data_file(filename):
 
 
 
-# ______ IMPORTANT: Explanation + Breakdown ______:
+# ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
 
 # What is the intent behind this code in light of this project?
 # - The intent is to retrieve the library books data from the 'library_books.json' file & 
