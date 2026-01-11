@@ -18,10 +18,16 @@ class UserInputs:
     def __init__(self):
         self.title = None
         self.author = None
-        self.user_name = None
+        self.u_name = None
 
     def book_title(self):
         self.title = input("\nBook title:\n").upper()
+
+    def book_author(self):
+        self.author = input("\nAuthors name:\n").upper()
+
+    def user_name(self):
+        self.u_name = input("\nPlease enter your name:\n").title()
 
 
 
