@@ -14,6 +14,18 @@ def get_data_file(filename):
 
 
 
+class UserInputs:
+    def __init__(self):
+        self.title = None
+        self.author = None
+        self.user_name = None
+
+    def book_title(self):
+        self.title = input("\nBook title:\n").upper()
+
+
+
+
 
 # ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
 
