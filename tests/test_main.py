@@ -124,10 +124,12 @@ while True:
         if len(user.user_returned_books_data) == 0:
             print("\nThere are currently no returned books to show.")
         else:
-            for key_1 in user.user_borrowed_books_data:
-                if key_1 == user_name:
-                    print(f"All borrowed books history for {key_1}:")
-                    
+            for name, books_list in user.user_borrowed_books_data.items():
+                if name == user_name:
+                    print(f"\nAll borrowed books history for {name}:")
+                    print(books_list)
+
+
 
 
     keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
