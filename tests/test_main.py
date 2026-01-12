@@ -124,6 +124,7 @@ while True:
                     break
 
         elif user_option_choice_1 == "v":                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books
+            view_past_transacs = input("Enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
             if len(user.user_returned_books_data) == 0:
                 print("\nThere are currently no returned books to show.")
             else:
