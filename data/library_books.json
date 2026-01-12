@@ -4,7 +4,7 @@
     "title": "1984",
     "author": "GEORGE ORWELL",
     "genre": "DYSTOPIAN",
-    "available": false
+    "available": true
   },
   {
     "book_id": "B002",
@@ -46,6 +46,6 @@
     "title": "PYTHON CRASH COURSE",
     "author": "ERIC MATTHES",
     "genre": "PROGRAMMING",
-    "available": false
+    "available": true
   }
 ]
