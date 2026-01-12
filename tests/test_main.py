@@ -123,11 +123,6 @@ while True:
                 else:
                     break
 
-                # keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
-
-                # if keep_going == 'e':
-                #     break
-
         elif user_option_choice_1 == "v":                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books
             if len(user.user_returned_books_data) == 0:
                 print("\nThere are currently no returned books to show.")
@@ -140,10 +135,6 @@ while True:
         elif user_option_choice_1 == "e":
             break
 
-    # keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
-
-    # if keep_going == 'e':
-    #     break
 
 
 
