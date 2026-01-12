@@ -127,18 +127,21 @@ while True:
             view_past_transacs = input("Enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
             
             if view_past_transacs == "b":
-                if len(user.user_returned_books_data) == 0:
+
+                if len(user.user_borrowed_books_data) == 0:
                     print("\nThere are currently no returned books to show.")
                 else:
                     for name, books_list in user.user_borrowed_books_data.items():
                         if name == user_name:
-                            print(f"\nAll returned books history for {name}:")
+                            print(f"\nAll currently borrowed books history for {name}:")
                             print(books_list)
+
             elif view_past_transacs == "r":
+
                 if len(user.user_returned_books_data) == 0:
                     print("\nThere are currently no returned books to show.")
                 else:
-                    for name, books_list in user.user_borrowed_books_data.items():
+                    for name, books_list in user.user_returned_books_data.items():
                         if name == user_name:
                             print(f"\nAll returned books history for {name}:")
                             print(books_list)
