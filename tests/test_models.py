@@ -85,9 +85,13 @@ class User:                                                             #⬅️ 
         self.u_name = u_name                                  #⬅️ instance variable
         self.json_books_data_list = json_books_data_list      #⬅️ instance variable
 
-        if not self.u_name in self.user_borrowed_books_data:
+        if not self.u_name in User.user_borrowed_books_data:
             # print(f"\nJust added {self.u_name}")                  #⬅️ For testing purposes.
             User.user_borrowed_books_data[self.u_name] = []         #⬅️ User name as key: empty list as value to that key
+
+        if not self.u_name in User.user_returned_books_data:
+            # print(f"\nJust added {self.u_name}")                  #⬅️ For testing purposes.
+            User.user_returned_books_data[self.u_name] = []
 
     def borrow_books(self, title, author):
         for item in self.json_books_data_list:

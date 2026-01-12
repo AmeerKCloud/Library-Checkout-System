@@ -79,64 +79,66 @@ user_inputs = UserInputs()
 
 while True:
     user_name = user_inputs.user_name()
-    user = User(user_name, test_load_books())
 
-    user_option_choice_1 = input(f"\nChoose an option, {user_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
+    while True:
+        user = User(user_name, test_load_books())
 
-    if user_option_choice_1 == "c":
+        user_option_choice_1 = input(f"\nChoose an option, {user_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
 
-        while True:
-            user_option_choice_2 = input(f"\nChoose a transaction type, {user_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to return to the main menu:\n").lower()
+        if user_option_choice_1 == "c":
 
-            if user_option_choice_2 == "a":
-                book = Book(user_inputs.book_title(), user_inputs.book_author(), test_load_books())
-                book.is_available()
+            while True:
+                user_option_choice_2 = input(f"\nChoose a transaction type, {user_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to return to the main menu:\n").lower()
 
-            elif user_option_choice_2 == 'b':
+                if user_option_choice_2 == "a":
+                    book = Book(user_inputs.book_title(), user_inputs.book_author(), test_load_books())
+                    book.is_available()
 
-                title = user_inputs.book_title()
-                author = user_inputs.book_author()
+                elif user_option_choice_2 == 'b':
 
-                library = Library(title, author, test_load_books())
-                book_id, new_status = library.borrow_book()
-                
-                if book_id == False and new_status == False:
-                    break
+                    title = user_inputs.book_title()
+                    author = user_inputs.book_author()
+
+                    library = Library(title, author, test_load_books())
+                    book_id, new_status = library.borrow_book()
+                    
+                    if book_id == False and new_status == False:
+                        break
+                    else:
+                        user.borrow_books(title, author)
+                        update_book_availability(book_id, new_status) 
+
+                elif user_option_choice_2 == 'r':
+
+                    title = user_inputs.book_title()
+                    author = user_inputs.book_author()
+
+                    library = Library(title, author, test_load_books())
+                    book_id, new_status = library.return_book()
+                    update_book_availability(book_id, new_status)
+                    user.returned_books(title, author)
+
+                elif user_option_choice_2 == 'v':
+                    library.show_books()
                 else:
-                    user.borrow_books(title, author)
-                    update_book_availability(book_id, new_status) 
+                    break
 
-            elif user_option_choice_2 == 'r':
+                # keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
 
-                title = user_inputs.book_title()
-                author = user_inputs.book_author()
+                # if keep_going == 'e':
+                #     break
 
-                library = Library(title, author, test_load_books())
-                book_id, new_status = library.return_book()
-                update_book_availability(book_id, new_status)
-                user.returned_books(title, author)
-
-            elif user_option_choice_2 == 'v':
-                library.show_books()
+        elif user_option_choice_1 == "v":                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books
+            if len(user.user_returned_books_data) == 0:
+                print("\nThere are currently no returned books to show.")
             else:
-                break
+                for name, books_list in user.user_borrowed_books_data.items():
+                    if name == user_name:
+                        print(f"\nAll returned books history for {name}:")
+                        print(books_list)
 
-            # keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
-
-            # if keep_going == 'e':
-            #     break
-
-    elif user_option_choice_1 == "v":                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books
-        if len(user.user_returned_books_data) == 0:
-            print("\nThere are currently no returned books to show.")
-        else:
-            for name, books_list in user.user_borrowed_books_data.items():
-                if name == user_name:
-                    print(f"\nAll borrowed books history for {name}:")
-                    print(books_list)
-
-    elif user_option_choice_1 == "e":
-        break
+        elif user_option_choice_1 == "e":
+            break
 
     # keep_going = input("\nPress 'e' to exit. Press any other key to return to the main menu:\n").lower()
 
