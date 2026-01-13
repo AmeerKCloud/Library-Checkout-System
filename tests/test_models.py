@@ -102,7 +102,7 @@ class User:                                                             #⬅️ 
                     "title": item["title"],
                     "author": item["author"],
                     "genre": item["genre"],
-                    "date borrowed": date,
+                    "borrowed on": date,
                 }
 
                 User.user_borrowed_books_data[self.u_name].append(book)
@@ -121,7 +121,7 @@ class User:                                                             #⬅️ 
                     "title": item["title"],
                     "author": item["author"],
                     "genre": item["genre"],
-                    "date returned": date,
+                    "returned on": date,
                 }
 
                 User.user_returned_books_data[self.u_name].append(book)
