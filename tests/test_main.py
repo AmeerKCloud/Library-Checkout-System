@@ -90,7 +90,7 @@ while True:
         if user_option_choice_1 == "c":
 
             while True:
-                user_option_choice_2 = input(f"\nChoose a transaction type, {user_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to return to the main menu:\n").lower()
+                user_option_choice_2 = input(f"\nChoose a transaction type, {user_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to exit to the main menu:\n").lower()
 
                 if user_option_choice_2 == "a":
                     book = Book(user_inputs.book_title(), user_inputs.book_author(), test_load_books())
