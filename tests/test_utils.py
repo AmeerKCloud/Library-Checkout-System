@@ -43,6 +43,10 @@ class UserInputs:
                 return self.u_name
             else:
                 print("❌ Field cannot be blank.")
+
+    def date(self):
+        while True:
+            
         
 
 
