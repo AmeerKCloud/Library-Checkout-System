@@ -93,7 +93,7 @@ class User:                                                             #⬅️ 
             # print(f"\nJust added {self.u_name}")                  #⬅️ For testing purposes.
             User.user_returned_books_data[self.u_name] = []
 
-    def borrow_books(self, title, author):
+    def borrow_books(self, title, author, date):
         for item in self.json_books_data_list:
             if item["title"] == title and item["author"] == author:
                 # Create a NEW borrowed book dict each time
@@ -105,7 +105,7 @@ class User:                                                             #⬅️ 
                 }
 
                 User.user_borrowed_books_data[self.u_name].append(book)
-                print(f"Borrowed: {title} by {author}")
+                print(f"Borrowed: {title} by {author}, on: {date}")
                 break
         print(User.user_borrowed_books_data)
         return User.user_borrowed_books_data
