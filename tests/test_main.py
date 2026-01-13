@@ -79,6 +79,8 @@ user_inputs = UserInputs()
 
 while True:
     user_name = user_inputs.user_name()
+    if user_name == "e":
+        break
 
     while True:
         user = User(user_name, test_load_books())
