@@ -112,7 +112,7 @@ class User:                                                             #⬅️ 
         return User.user_borrowed_books_data
 
 
-    def returned_books(self, title, author):
+    def returned_books(self, title, author, date):
         for item in self.json_books_data_list:
             if item["title"] == title and item["author"] == author:
                 # Create a new returned book dict. each time.
@@ -120,7 +120,8 @@ class User:                                                             #⬅️ 
                     "book_id": item["book_id"],
                     "title": item["title"],
                     "author": item["author"],
-                    "genre": item["genre"]
+                    "genre": item["genre"],
+                    "date returned": date,
                 }
 
                 User.user_returned_books_data[self.u_name].append(book)
