@@ -125,7 +125,7 @@ class User:                                                             #⬅️ 
                 }
 
                 User.user_returned_books_data[self.u_name].append(book)
-                print(f"Returned: {title} by {author}")
+                print(f"Returned: {title} by {author}, on: {date}")
                 break
         
         print(User.user_returned_books_data)
