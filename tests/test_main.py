@@ -79,7 +79,7 @@ user_inputs = UserInputs()
 
 while True:
     user_name = user_inputs.user_name()
-    if user_name == "e":
+    if user_name == "E":
         break
 
     while True:
