@@ -137,7 +137,7 @@ while True:
                         if name == user_name:
                             print(f"\nAll currently borrowed books history for {name}:")
                             for item in books_list:
-                                print("-------------------------------------------")
+                                print("-------------------------------------------------")
                                 for key, value in item.items():
                                     print(f"{key}: {value}")
 
@@ -150,7 +150,10 @@ while True:
                     for name, books_list in user.user_returned_books_data.items():
                         if name == user_name:
                             print(f"\nAll returned books history for {name}:")
-                            print(books_list)
+                            for item in books_list:
+                                print("-------------------------------------------------")
+                                for key, value in item.items():
+                                    print(f"{key}: {value}")
 
         elif user_option_choice_1 == "e":
             break
