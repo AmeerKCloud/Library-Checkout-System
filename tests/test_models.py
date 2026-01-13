@@ -126,6 +126,11 @@ class User:                                                             #⬅️ 
 
                 User.user_returned_books_data[self.u_name].append(book)
                 print(f"Returned: {title} by {author}, on: {date}")
+
+                if self.u_name in User.user_borrowed_books_data:
+                    for item in User.user_borrowed_books_data[self.u_name]:
+                        if item["title"] == title and item["author"] == author:
+                            User.user_borrowed_books_data[self.u_name].remove(item)
                 break
         
         print(User.user_returned_books_data)
