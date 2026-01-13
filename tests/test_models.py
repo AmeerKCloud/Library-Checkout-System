@@ -101,7 +101,8 @@ class User:                                                             #⬅️ 
                     "book_id": item["book_id"],
                     "title": item["title"],
                     "author": item["author"],
-                    "genre": item["genre"]
+                    "genre": item["genre"],
+                    "date borrowed": date,
                 }
 
                 User.user_borrowed_books_data[self.u_name].append(book)
