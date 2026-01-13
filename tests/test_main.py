@@ -100,6 +100,7 @@ while True:
 
                     title = user_inputs.book_title()
                     author = user_inputs.book_author()
+                    date = user_inputs.date()
 
                     library = Library(title, author, test_load_books())
                     book_id, new_status = library.borrow_book()
@@ -107,18 +108,19 @@ while True:
                     if book_id == False and new_status == False:
                         break
                     else:
-                        user.borrow_books(title, author)
+                        user.borrow_books(title, author, date)
                         update_book_availability(book_id, new_status) 
 
                 elif user_option_choice_2 == 'r':
 
                     title = user_inputs.book_title()
                     author = user_inputs.book_author()
+                    date = user_inputs.date()
 
                     library = Library(title, author, test_load_books())
                     book_id, new_status = library.return_book()
                     update_book_availability(book_id, new_status)
-                    user.returned_books(title, author)
+                    user.returned_books(title, author, date)
 
                 elif user_option_choice_2 == 'v':
                     library.show_books()
