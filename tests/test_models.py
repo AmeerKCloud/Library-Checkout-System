@@ -73,7 +73,8 @@ class Book:
 
 
 class User:                                                             #⬅️ Currently working on this class.
-    """Tracks borrowed books"""
+    """This class contains the functions 
+    that track borrowed & returned books"""
 
     #⬇️'user_books_data' initiated as a class variable. A class variable belongs to the class itself, not individual objects, & can be shared by all objects
     user_borrowed_books_data = {}                                              #⬅️ The main dict., user name as key, list of dict. items as value.
@@ -129,9 +130,9 @@ class User:                                                             #⬅️ 
                 print(f"Returned: {title} by {author}, on: {date}")
 
                 if self.u_name in User.user_borrowed_books_data:
-                    for item in User.user_borrowed_books_data[self.u_name]:
+                    for item in User.user_borrowed_books_data[self.u_name]: 
                         if item["title"] == title and item["author"] == author:
-                            User.user_borrowed_books_data[self.u_name].remove(item)
+                            User.user_borrowed_books_data[self.u_name].remove(item)     #⬅️ Removes the returned book from the currently borrowed books list.
                 break
         
         print(User.user_returned_books_data)
