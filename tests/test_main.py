@@ -87,7 +87,7 @@ while True:
     while True:
         user = User(user_name, test_load_books())
 
-        user_option_choice_1 = input(f"\nChoose an option, {user_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
+        user_option_choice_1 = user_inputs.menu_1(user_name)
 
         if user_option_choice_1 == "c":
 
