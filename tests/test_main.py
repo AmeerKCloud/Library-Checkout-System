@@ -47,6 +47,7 @@ import json
 from test_utils import get_data_file
 
 def test_load_books():
+    """All the books from the JSON data file."""
     json_file_path = get_data_file("library_books.json")
 
     with open(json_file_path, "r") as file:
@@ -57,6 +58,7 @@ def test_load_books():
 
 
 def update_book_availability(id_book, update_status):
+    """Updates the book availability within the JSON data file."""
     json_file_path = get_data_file("library_books.json")
 
     with open(json_file_path, "r") as file:                     #⬅️ 'r' stands for 'read'?
