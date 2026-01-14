@@ -54,6 +54,7 @@ class UserInputs:
 
     def menu_1(self, u_name):
         self.menu_1_options = input(f"\nChoose an option, {u_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
+        return self.menu_1_options
 
 
 
