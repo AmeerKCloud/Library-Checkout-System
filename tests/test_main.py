@@ -180,8 +180,10 @@ while True:
 # - - Option 'a' lets him create a new transaction (the already existed menu)
 # - - Option 'b' lets him check all previous transactions (borrowed/returned books)
 # - - - Book(s) borrowed, date they were borrowed. Book(s) returned, date they were returned.
-
 # Also:
 # - When a user returns a book, it must be removed from the currently borrowed books history
 # - When a user borrows a previously returned book & then returns it again, the previous log is kept, 
 # new log with new date is added.
+
+# OPTIONAL challenges TODO:
+# - 
