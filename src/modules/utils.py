@@ -13,6 +13,59 @@ def get_data_file(filename):
     return os.path.join(get_project_root(), "data", filename)
 
 
+class UserInputs:
+    def __init__(self):
+        self.title = None
+        self.author = None
+        self.u_name = None
+
+    def book_title(self):
+        while True:
+            self.title = input("\nBook title:\n").upper()
+            if self.title != "":
+                return self.title
+            else:
+                print("❌ Field cannot be blank.")
+
+    def book_author(self):
+        while True:
+            self.author = input("\nAuthors name:\n").upper()
+            if self.author != "":
+                return self.author
+            else:
+                print("❌ Field cannot be blank.")
+
+    def user_name(self):
+        while True:
+            self.u_name = input("\nPlease enter your name:\n").title()
+            if self.u_name != "":
+                return self.u_name
+            else:
+                print("❌ Field cannot be blank.")
+
+    def date(self):
+        while True:
+            self.transac_date = input("\nEnter todays date:\n")
+            if self.transac_date != "":
+                return self.transac_date
+            else:
+                print("❌ Field cannot be blank.")
+
+    def menu_1(self, u_name):
+        while True:
+            self.menu_1_options = input(f"\nChoose an option, {u_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
+            if self.menu_1_options != "" and self.menu_1_options in ["c", "v", "e"]:
+                return self.menu_1_options
+            else:
+                print("❌ Field cannot be blank OR enter only the letter choices provided ('c', 'v', 'e').")
+    
+    def menu_2(self, u_name):
+        while True:
+            self.menu_2_options = input(f"\nChoose a transaction type, {u_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to exit to the main menu:\n").lower()
+            if self.menu_2_options != "" and self.menu_2_options in ["a", "b", "r", "v", "e"]:
+                return self.menu_2_options
+            else:
+                print("❌ Field cannot be blank OR enter only the letter choices provided ('a', 'b', 'r', 'v', 'e').")
 
 
 # ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
