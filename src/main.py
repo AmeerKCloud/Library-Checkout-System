@@ -9,6 +9,7 @@ PRJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(PRJECT_ROOT)
 
 import json
+from modules.utils import get_data_file
 
 def test_load_books():
     """All the books from the JSON data file."""
