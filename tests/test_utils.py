@@ -53,12 +53,20 @@ class UserInputs:
                 print("❌ Field cannot be blank.")
 
     def menu_1(self, u_name):
-        self.menu_1_options = input(f"\nChoose an option, {u_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
-        return self.menu_1_options
+        while True:
+            self.menu_1_options = input(f"\nChoose an option, {u_name}:\n'c' for creating a new transaction \n'v' for viewing all previous transactions \n'e' to exit:\n").lower()
+            if self.menu_1_options != "" and self.menu_1_options in ["c", "v", "e"]:
+                return self.menu_1_options
+            else:
+                print("❌ Field cannot be blank OR enter only the letter choices provided ('c', 'v', 'e').")
     
     def menu_2(self, u_name):
-        self.menu_2_options = input(f"\nChoose a transaction type, {u_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to exit to the main menu:\n").lower()
-        return self.menu_2_options
+        while True:
+            self.menu_2_options = input(f"\nChoose a transaction type, {u_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to exit to the main menu:\n").lower()
+            if self.menu_2_options != "" and self.menu_2_options in ["a", "b", "r", "v", "e"]:
+                return self.menu_2_options
+            else:
+                print("❌ Field cannot be blank OR enter only the letter choices provided ('a', 'b', 'r', 'v', 'e').")
 
 
 
