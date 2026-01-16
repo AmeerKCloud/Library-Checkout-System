@@ -1,6 +1,4 @@
-
-
-
+# Here go all of the classes for the 'main.py' library main program.
 
 
 class Library:
