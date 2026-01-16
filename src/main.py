@@ -1,3 +1,6 @@
+# The final main program for the library checkout system program.
+# - To see the prototype/experimental/test code, visit the 'tests' folder
+
 from modules.models import Library, Book, User
 from modules.utils import UserInputs, get_data_file
 
@@ -9,7 +12,6 @@ PRJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(PRJECT_ROOT)
 
 import json
-from modules.utils import get_data_file
 
 def test_load_books():
     """All the books from the JSON data file."""
