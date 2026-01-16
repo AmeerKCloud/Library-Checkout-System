@@ -9,7 +9,6 @@ class Library:
         self.book_title = book_title
         self.book_author = book_author
         self.json_books_data_list = json_books_data_list
-        # self.library = []
 
     def show_books(self):
         print("\n-----------------------All of our titles:----------------------------:")
