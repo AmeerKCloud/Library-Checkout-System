@@ -1,5 +1,5 @@
-from test_models import Library, Book, User
-from test_utils import UserInputs
+from modules.models import Library, Book, User
+from modules.utils import UserInputs, get_data_file
 
 import sys
 import os
@@ -9,7 +9,6 @@ PRJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(PRJECT_ROOT)
 
 import json
-from test_utils import get_data_file
 
 def test_load_books():
     """All the books from the JSON data file."""
