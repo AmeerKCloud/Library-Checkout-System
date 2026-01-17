@@ -128,3 +128,8 @@ while True:
 
         elif user_option_choice_1 == "e":
             break
+
+
+# IMPORTANT: Program still has some issues & bugs:
+# - Issue: When you enter a non-existent book/author combo, it takes u back 2 main menu
+# - - It should infact only take you back to the secondary menu.
