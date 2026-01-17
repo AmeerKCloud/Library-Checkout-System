@@ -25,7 +25,7 @@
     "title": "THE HOBBIT",
     "author": "J.R.R. TOLKIEN",
     "genre": "FANTASY",
-    "available": true
+    "available": false
   },
   {
     "book_id": "B005",
