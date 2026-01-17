@@ -129,7 +129,7 @@ while True:
                 else:
                     break
 
-        elif user_option_choice_1 == "v":                       #⬅️ Currntly here. Wrkng out how 2 view previously borrowed / returned books (completed)
+        elif user_option_choice_1 == "v":                       #⬅️ 2 view previously borrowed / returned books (completed)
             view_past_transacs = input("Enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
             
             if view_past_transacs == "b":
@@ -168,8 +168,8 @@ while True:
 #--------------------------------- End of Main Program ------------------------------------
 
 # TODO:
-# - Refactor code to improve modularity and separation of concerns
-# - Add error handling for file operations and user inputs
+# - Refactor code to improve modularity and separation of concerns ⬅️ In progress...
+# - Add error handling for file operations and user inputs         ⬅️ In progress...
 
 # [❌ in progress] Currently program does not catch irrelevant user inputs, like random gibberish
 # - Create functionality that checks for this in the 'test_utils.py' file
