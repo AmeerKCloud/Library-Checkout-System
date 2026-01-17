@@ -109,7 +109,7 @@ class User:                                                             #⬅️ 
                 User.user_borrowed_books_data[self.u_name].append(book)
                 print(f"Borrowed: {title} by {author}, on: {date}")
                 break
-        print(User.user_borrowed_books_data)
+        print(User.user_borrowed_books_data)                                  #⬅️ For testing purposes. Prints dict. of users borrowed books.
         return User.user_borrowed_books_data
 
 
