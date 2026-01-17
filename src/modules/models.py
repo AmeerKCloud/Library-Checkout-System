@@ -33,7 +33,6 @@ class Library:
                         for key, value in item.items():
                             print(f"{key}: {value}")
 
-                        print(f"\nYou have now borrowed {self.book_title.title()}, by {self.book_author.title()}")
                         item["available"] = False
 
                         print("\n")
@@ -99,7 +98,7 @@ class User:
                 }
 
                 User.user_borrowed_books_data[self.u_name].append(book)
-                print(f"Borrowed: {title} by {author}, on: {date}")
+                print(f"\nYou have now borrowed {title}, by {author}")
                 break
         print(User.user_borrowed_books_data)
         return User.user_borrowed_books_data
