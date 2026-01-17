@@ -100,7 +100,7 @@ class User:
                 User.user_borrowed_books_data[self.u_name].append(book)
                 print(f"\nYou have now borrowed {title}, by {author}")
                 break
-        print(User.user_borrowed_books_data)
+            
         return User.user_borrowed_books_data
 
 
@@ -124,6 +124,5 @@ class User:
                         if item["title"] == title and item["author"] == author:
                             User.user_borrowed_books_data[self.u_name].remove(item)
                 break
-        
-        print(User.user_returned_books_data)
+
         return User.user_returned_books_data
