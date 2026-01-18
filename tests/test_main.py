@@ -135,7 +135,7 @@ while True:
             if view_past_transacs == "b":
 
                 if len(user.user_borrowed_books_data[user_name]) == 0:
-                    print("\nThere are currently no borrowed books to show.")
+                    print("\nThere are currently no borrowed books to show. 😓")
                 else:
                     for name, books_list in user.user_borrowed_books_data.items():
                         if name == user_name:
@@ -149,7 +149,7 @@ while True:
             elif view_past_transacs == "r":
 
                 if len(user.user_returned_books_data[user_name]) == 0:
-                    print("\nThere are currently no returned books to show.")
+                    print("\nThere are currently no returned books to show. 😓")
                 else:
                     for name, books_list in user.user_returned_books_data.items():
                         if name == user_name:
