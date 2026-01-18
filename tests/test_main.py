@@ -170,6 +170,8 @@ while True:
 # TODO:
 # - Refactor code to improve modularity and separation of concerns ❌ In progress...
 # - Add error handling for file operations and user inputs         ❌ In progress...
+# - - Currently adding date-time format input-validation
+# - - - See LINK: https://stackoverflow.com/questions/44808807/how-to-ensure-user-input-date-is-in-correct-format
 
 # [❌ in progress] Currently program does not catch irrelevant user inputs, like random gibberish
 # - Create functionality that checks for this in the 'test_utils.py' file
