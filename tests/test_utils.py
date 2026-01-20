@@ -47,7 +47,7 @@ class UserInputs:
 
     def date(self):
         while True:
-            self.transac_date = input("\nEnter todays date:\n")
+            self.transac_date = input("\nEnter todays date in the following format: MM/DD/YYYY\n")
             if self.transac_date != "":
                 return self.transac_date
             else:
