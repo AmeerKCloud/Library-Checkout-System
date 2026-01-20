@@ -45,6 +45,26 @@ class UserInputs:
             else:
                 print("❌ Field cannot be blank.")
 
+    def valid_date_format(self, date_string, format_code):
+        """
+        Validates if a date string matches the specified format.
+
+        Args:
+            date_string (str): The input date string.
+            format_code (str): The expected format code (e.g., "%Y-%m-%d").
+
+        Returns:
+            datetime.datetime or None: The datetime object if valid, otherwise None.
+        """
+
+        try:
+            # Try to parse the string into a datetime object
+            valid_date = datetime.strptime(date_string, format_code)
+            return valid_date
+        except ValueError:
+            # If a ValueError is raised, the format or date itself is invalid
+            return None
+
     def date(self):
         while True:
             self.transac_date = input("\nEnter todays date (MM/DD/YYYY):\n")
