@@ -3,6 +3,7 @@
 
 # NOTE: See breakdown + explanation of below code for importing JSON file data at the end of this file.
 
+from datetime import datetime
 import os
 
 def get_project_root():
