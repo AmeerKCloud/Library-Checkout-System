@@ -69,8 +69,12 @@ class UserInputs:
         while True:
             self.transac_date = input("\nEnter todays date (MM/DD/YYYY):\n")
 
+            if self.transac_date == "e":
+                break
+
             if self.transac_date != "":
                 format_to_check = "%Y-%m-%d"
+                print(format_to_check)
                 validated_date = self.valid_date_format(self.transac_date, format_to_check)
 
                 if validated_date:
