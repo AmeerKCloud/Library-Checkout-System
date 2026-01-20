@@ -67,8 +67,11 @@ class UserInputs:
 
     def date(self):
         while True:
+            format_to_check = "%m/%d/%y"
             self.transac_date = input("\nEnter todays date (MM/DD/YYYY):\n")
-            if self.transac_date != "":
+
+            validated_date = valid_date_format()
+            if self.transac_date != "" and :
                 return self.transac_date
             else:
                 print("❌ Field cannot be blank.")
