@@ -65,12 +65,12 @@ class UserInputs:
             # If a ValueError is raised, the format or date itself is invalid
             return None
 
-    def date(self):
+    def date(self):                 #⬅️ Currently here, trying to fix date format validation.
         while True:
             self.transac_date = input("\nEnter todays date (MM/DD/YYYY):\n")
 
             if self.transac_date != "":
-                format_to_check = "%m/%d/%y"
+                format_to_check = "%Y-%m-%d"
                 validated_date = self.valid_date_format(self.transac_date, format_to_check)
 
                 if validated_date:
