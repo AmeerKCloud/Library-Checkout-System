@@ -74,11 +74,11 @@ class UserInputs:
                 break
 
             if self.transac_date != "":
-                format_to_check = "%m/%d/%Y"
-                validated = self.valid_date_format(self.transac_date, format_to_check)
+                format_to_check = "%m/%d/%Y"    #➡️ Capital 'Y' means four Y's for the year format
+                validated_date = self.valid_date_format(self.transac_date, format_to_check)
 
-                if validated:
-                    formatted_date = validated.strftime(format_to_check)
+                if validated_date:
+                    formatted_date = validated_date.strftime(format_to_check)
                     return formatted_date
                 else:
                     print("❌ Invalid date format. Try again.")
