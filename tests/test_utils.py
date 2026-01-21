@@ -78,7 +78,8 @@ class UserInputs:
                 validated = self.valid_date_format(self.transac_date, format_to_check)
 
                 if validated:
-                    return validated
+                    formatted_date = validated.strftime(format_to_check)
+                    return formatted_date
                 else:
                     print("❌ Invalid date format. Try again.")
             else:
