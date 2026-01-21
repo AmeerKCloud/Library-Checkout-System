@@ -60,6 +60,7 @@ class UserInputs:
         try:
             # Try to parse the string into a datetime object
             valid_date = datetime.strptime(date_string, format_code)
+            print(valid_date)
             return valid_date
         except ValueError:
             # If a ValueError is raised, the format or date itself is invalid
@@ -73,8 +74,7 @@ class UserInputs:
                 break
 
             if self.transac_date != "":
-                format_to_check = "%Y-%m-%d"
-                print(format_to_check)
+                format_to_check = "%m/%d/%Y"
                 validated_date = self.valid_date_format(self.transac_date, format_to_check)
 
                 if validated_date:
