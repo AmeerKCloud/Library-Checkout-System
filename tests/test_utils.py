@@ -59,7 +59,7 @@ class UserInputs:
 
         try:
             # Try to parse the string into a datetime object
-            valid_date = datetime.strptime(date_string, format_code)   #⬅️ '.strptime()' means 'String Parse Time': Takes a string that looks like a date and parses it into a Python datetime object
+            valid_date = datetime.strptime(date_string, format_code)   #⬅️'.strptime()' ie 'String Parse Time': Takes a string that looks like a date; parses it into a Python datetime object based on a format you tell it
             print(f"\nValid date? {valid_date}")
             return valid_date
         except ValueError:
@@ -81,7 +81,7 @@ class UserInputs:
                 validated_date = self.valid_date_format(self.transac_date, format_to_check)
 
                 if validated_date:
-                    formatted_date = validated_date.strftime(format_to_check)  #⬅️ '.strftime()' means 'String Format Time': Takes a Python datetime object and formats it into a string.
+                    formatted_date = validated_date.strftime(format_to_check)  #⬅️ '.strftime()' ie 'String Format Time': Takes a Python datetime object and converts it back to a formatted string.
                     return formatted_date
                 else:
                     print("❌ Invalid date format. Try again.")
