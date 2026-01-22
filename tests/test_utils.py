@@ -128,7 +128,7 @@ class Presentation:
         if len(self.book_transac_history) == 0:
             print("\nThere are currently no borrowed books to show. 😓")
         else:
-            for name, books_list in user.user_borrowed_books_data.items():
+            for name, books_list in self.book_transac_history.items():
                 if name == user_name:
                     print(f"\nAll currently borrowed books history for {name}:")
                     for item in books_list:
