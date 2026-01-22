@@ -130,37 +130,39 @@ while True:
                     break
 
         elif user_option_choice_1 == "v":                       #⬅️ 2 view previously borrowed / returned books (completed)
-            user_option_choice_3 = user_inputs.menu_3(user_name)
-            
-            if user_option_choice_3 == "b":
 
-                if len(user.user_borrowed_books_data[user_name]) == 0:
-                    print("\nThere are currently no borrowed books to show. 😓")
-                else:
-                    for name, books_list in user.user_borrowed_books_data.items():
-                        if name == user_name:
-                            print(f"\nAll currently borrowed books history for {name}:")
-                            for item in books_list:
-                                print("-------------------------------------------------")
-                                for key, value in item.items():
-                                    print(f"{key}: {value}")
+            while True:
+                user_option_choice_3 = user_inputs.menu_3(user_name)
+                
+                if user_option_choice_3 == "b":
+
+                    if len(user.user_borrowed_books_data[user_name]) == 0:
+                        print("\nThere are currently no borrowed books to show. 😓")
+                    else:
+                        for name, books_list in user.user_borrowed_books_data.items():
+                            if name == user_name:
+                                print(f"\nAll currently borrowed books history for {name}:")
+                                for item in books_list:
+                                    print("-------------------------------------------------")
+                                    for key, value in item.items():
+                                        print(f"{key}: {value}")
 
 
-            elif user_option_choice_3 == "r":
+                elif user_option_choice_3 == "r":
 
-                if len(user.user_returned_books_data[user_name]) == 0:
-                    print("\nThere are currently no returned books to show. 😓")
-                else:
-                    for name, books_list in user.user_returned_books_data.items():
-                        if name == user_name:
-                            print(f"\nAll returned books history for {name}:")
-                            for item in books_list:
-                                print("-------------------------------------------------")
-                                for key, value in item.items():
-                                    print(f"{key}: {value}")
-            
-            else:
-                break
+                    if len(user.user_returned_books_data[user_name]) == 0:
+                        print("\nThere are currently no returned books to show. 😓")
+                    else:
+                        for name, books_list in user.user_returned_books_data.items():
+                            if name == user_name:
+                                print(f"\nAll returned books history for {name}:")
+                                for item in books_list:
+                                    print("-------------------------------------------------")
+                                    for key, value in item.items():
+                                        print(f"{key}: {value}")
+                
+                elif user_option_choice_3 == "e":
+                    break
 
         elif user_option_choice_1 == "e":
             break
