@@ -130,9 +130,9 @@ while True:
                     break
 
         elif user_option_choice_1 == "v":                       #⬅️ 2 view previously borrowed / returned books (completed)
-            view_past_transacs = input("Enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
+            user_option_choice_3 = user_inputs.menu_3(user_name)
             
-            if view_past_transacs == "b":
+            if user_option_choice_3 == "b":
 
                 if len(user.user_borrowed_books_data[user_name]) == 0:
                     print("\nThere are currently no borrowed books to show. 😓")
@@ -146,7 +146,7 @@ while True:
                                     print(f"{key}: {value}")
 
 
-            elif view_past_transacs == "r":
+            elif user_option_choice_3 == "r":
 
                 if len(user.user_returned_books_data[user_name]) == 0:
                     print("\nThere are currently no returned books to show. 😓")
