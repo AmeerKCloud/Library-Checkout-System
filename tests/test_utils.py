@@ -16,6 +16,7 @@ def get_data_file(filename):
 
 
 class UserInputs:
+    """All user menu options and inputs go here."""
     def __init__(self):
         self.title = None
         self.author = None
