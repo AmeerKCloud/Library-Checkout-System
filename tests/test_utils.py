@@ -95,7 +95,7 @@ class UserInputs:
                 return self.menu_1_options
             else:
                 print("❌ Field cannot be blank OR enter only the letter choices provided ('c', 'v', 'e').")
-    
+
     def menu_2(self, u_name):
         while True:
             self.menu_2_options = input(f"\nChoose a transaction type, {u_name}: \n'a' for availability \n'b' for borrow \n'r' for return \n'v' for viewing titles \n'e' to exit to the main menu:\n").lower()
