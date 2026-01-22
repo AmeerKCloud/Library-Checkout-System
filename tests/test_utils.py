@@ -104,6 +104,15 @@ class UserInputs:
             else:
                 print("❌ Field cannot be blank OR enter only the letter choices provided ('a', 'b', 'r', 'v', 'e').")
 
+    def menu_3(self):
+        while True:
+            self.menu_3_options = input("Enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
+            if self.menu_3_options != "" and self.menu_3_options in ["b", "v"]:
+                return self.menu_3_options
+            else:
+                print("❌ Field cannot be blank OR enter only the letter choices provided ('b', 'r').")
+
+
 
 
 
