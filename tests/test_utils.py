@@ -40,13 +40,10 @@ class UserInputs:
     def user_name(self):
         while True:
             self.u_name = input("\nPlease enter your name:\n").title()
-            # if self.u_name != "":
-            #     return self.u_name
-            # else:
-            #     print("❌ Field cannot be blank.")
-
-            if self.u_name == "E":
-                break
+            if self.u_name != "":
+                return self.u_name
+            else:
+                print("❌ Field cannot be blank.")
 
     def valid_date_format(self, date_string, format_code):
         """
