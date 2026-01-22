@@ -107,7 +107,7 @@ class UserInputs:
 
     def menu_3(self, u_name):
         while True:
-            self.menu_3_options = input(f"\n{u_name}, enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
+            self.menu_3_options = input(f"\n{u_name}, Enter:\n 'b' to view all currently borrowed books.\n 'r' to view all returned books\n 'e' to exit to the main menu:\n").lower()
             if self.menu_3_options != "" and self.menu_3_options in ["b", "r", "e"]:
                 return self.menu_3_options
             else:
