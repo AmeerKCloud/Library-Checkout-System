@@ -130,7 +130,7 @@ while True:
                     break
 
         elif user_option_choice_1 == "v":                       #⬅️ 2 view previously borrowed / returned books (completed)
-            presentation = Presentation
+            presentation = Presentation()
 
             while True:
                 user_option_choice_3 = user_inputs.menu_3(user_name)
