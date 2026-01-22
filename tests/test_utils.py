@@ -119,10 +119,18 @@ class Presentation:
     presentable when printed while also keeping the 'test_main.py' 
     decluttered or less long than it needs to be."""
 
-    def __init__(self):
-        pass
+    # def __init__(self, book_transac_history):
+    #     self.book_transac_history = book_transac_history
 
-    
+    def print_transac_history(self, book_transac_history):
+        self.book_transac_history = book_transac_history
+
+        
+
+
+
+
+
 
 # ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
 
