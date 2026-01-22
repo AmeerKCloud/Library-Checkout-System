@@ -158,6 +158,9 @@ while True:
                                 print("-------------------------------------------------")
                                 for key, value in item.items():
                                     print(f"{key}: {value}")
+            
+            else:
+                break
 
         elif user_option_choice_1 == "e":
             break
