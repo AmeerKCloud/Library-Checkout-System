@@ -114,7 +114,10 @@ class UserInputs:
                 print("❌ Field cannot be blank OR enter only the letter choices provided ('b', 'r').")
 
 
-
+class Presentation:
+    """This class contains methods that make certain information 
+    presentable when printed while also keeping the 'test_main.py' 
+    decluttered or less long than it needs to be."""
 
 
 # ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
