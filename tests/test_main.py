@@ -34,7 +34,7 @@
 
 
 from test_models import Library, Book, User
-from test_utils import UserInputs
+from test_utils import UserInputs, Presentation
 
 import sys
 import os

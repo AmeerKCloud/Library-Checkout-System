@@ -119,6 +119,8 @@ class Presentation:
     presentable when printed while also keeping the 'test_main.py' 
     decluttered or less long than it needs to be."""
 
+    def __init__(self):
+        pass
 
 # ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
 
