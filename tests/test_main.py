@@ -137,7 +137,7 @@ while True:
                 
                 if user_option_choice_3 == "b":
                     transac_type = "borrowed"
-                    borrowed_transac_data = user.user_borrowed_books_data[user_name]
+                    borrowed_transac_data = user.user_borrowed_books_data
                     presentation.print_transac_history(user_name, transac_type, borrowed_transac_data)
 
                     # if len(user.user_borrowed_books_data[user_name]) == 0:
