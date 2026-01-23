@@ -136,7 +136,8 @@ while True:
                 user_option_choice_3 = user_inputs.menu_3(user_name)
                 
                 if user_option_choice_3 == "b":
-                    presentation.print_transac_history(user_name, user.user_borrowed_books_data[user_name])
+                    transac_type = "borrowed"
+                    presentation.print_transac_history(user_name, transac_type, user.user_borrowed_books_data[user_name])
 
                     # if len(user.user_borrowed_books_data[user_name]) == 0:
                     #     print("\nThere are currently no borrowed books to show. 😓")
