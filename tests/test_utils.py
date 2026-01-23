@@ -122,22 +122,21 @@ class Presentation:
     # def __init__(self, book_transac_history):
     #     self.book_transac_history = book_transac_history
 
-    def print_transac_history(self, u_name, user_option_choice, book_transac_history):          #⬅️ Currently working on this method.
+    def print_transac_history(self, u_name, trans_type, book_transac_history):          #⬅️ Currently working on this method.
         self.user_name = u_name
-        self.user_option_choice = user_option_choice
+        self.trans_type = trans_type
         self.book_transac_history = book_transac_history
 
-        if self.user_option_choice == "b":
-            if len(self.book_transac_history) == 0:
-                print("\nThere are currently no borrowed books to show. 😓")
-            else:
-                for name, books_list in self.book_transac_history.items():
-                    if name == user_name:
-                        print(f"\nAll currently borrowed books history for {name}:")
-                        for item in books_list:
-                            print("-------------------------------------------------")
-                            for key, value in item.items():
-                                print(f"{key}: {value}")
+        if len(self.book_transac_history) == 0:
+            print(f"\nThere are currently no {self.trans_type} books to show. 😓")
+        else:
+            for name, books_list in self.book_transac_history.items():
+                if name == user_name:
+                    print(f"\nAll currently borrowed books history for {name}:")
+                    for item in books_list:
+                        print("-------------------------------------------------")
+                        for key, value in item.items():
+                            print(f"{key}: {value}")
 
 
 
