@@ -152,17 +152,19 @@ while True:
 
 
                 elif user_option_choice_3 == "r":
+                    transac_type = "returned"
+                    presentation.print_transac_history(user_name, transac_type, user.user_borrowed_books_data[user_name])
 
-                    if len(user.user_returned_books_data[user_name]) == 0:
-                        print("\nThere are currently no returned books to show. 😓")
-                    else:
-                        for name, books_list in user.user_returned_books_data.items():
-                            if name == user_name:
-                                print(f"\nAll returned books history for {name}:")
-                                for item in books_list:
-                                    print("-------------------------------------------------")
-                                    for key, value in item.items():
-                                        print(f"{key}: {value}")
+                    # if len(user.user_returned_books_data[user_name]) == 0:
+                    #     print("\nThere are currently no returned books to show. 😓")
+                    # else:
+                    #     for name, books_list in user.user_returned_books_data.items():
+                    #         if name == user_name:
+                    #             print(f"\nAll returned books history for {name}:")
+                    #             for item in books_list:
+                    #                 print("-------------------------------------------------")
+                    #                 for key, value in item.items():
+                    #                     print(f"{key}: {value}")
                 
                 elif user_option_choice_3 == "e":
                     break
