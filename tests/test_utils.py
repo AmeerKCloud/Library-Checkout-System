@@ -127,7 +127,7 @@ class Presentation:
         self.trans_type = trans_type
         self.book_transac_history = book_transac_history
 
-        if len(self.book_transac_history) == 0:
+        if len(self.book_transac_history[u_name]) == 0:
             print(f"\nThere are currently no {self.trans_type} books to show. 😓")
         else:
             for name_on_record, books_list in self.book_transac_history[u_name].items():
