@@ -137,7 +137,8 @@ while True:
                 
                 if user_option_choice_3 == "b":
                     transac_type = "borrowed"
-                    presentation.print_transac_history(user_name, transac_type, user.user_borrowed_books_data[user_name])
+                    borrowed_transac_data = user.user_borrowed_books_data[user_name]
+                    presentation.print_transac_history(user_name, transac_type, borrowed_transac_data)
 
                     # if len(user.user_borrowed_books_data[user_name]) == 0:
                     #     print("\nThere are currently no borrowed books to show. 😓")
@@ -153,7 +154,7 @@ while True:
 
                 elif user_option_choice_3 == "r":
                     transac_type = "returned"
-                    presentation.print_transac_history(user_name, transac_type, user.user_borrowed_books_data[user_name])
+                    presentation.print_transac_history(user_name, transac_type, user.user_returned_books_data[user_name])
 
                     # if len(user.user_returned_books_data[user_name]) == 0:
                     #     print("\nThere are currently no returned books to show. 😓")

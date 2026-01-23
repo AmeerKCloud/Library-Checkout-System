@@ -131,7 +131,7 @@ class Presentation:
             print(f"\nThere are currently no {self.trans_type} books to show. 😓")
         else:
             for name, books_list in self.book_transac_history.items():
-                if name == user_name:
+                if name == u_name:
                     print(f"\nAll currently borrowed books history for {name}:")
                     for item in books_list:
                         print("-------------------------------------------------")
