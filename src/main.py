@@ -38,8 +38,6 @@ def update_book_availability(id_book, update_status):
     with open(json_file_path, "w") as file:                     #⬅️ 'w' stands for 'write'?
         json.dump(books, file, indent=2)
 
-    # print(books)
-
 
 #--------------------------------- Main Program Below ------------------------------------
 
@@ -118,5 +116,5 @@ while True:
 
 
 # IMPORTANT: Program still has some issues & bugs:
-# - Issue: When you enter a non-existent book/author combo, it takes u back 2 main menu
-# - - It should infact only take you back to the secondary menu.
+# - Issue: When you enter a non-existent book/author combo, it takes u back 2 main menu (✅Resolved)
+# - - It should infact only take you back to the secondary menu. (✅Resolved)
