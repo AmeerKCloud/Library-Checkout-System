@@ -1,7 +1,7 @@
 # Utility helper functions shared across the project.
 # Includes reusable input validation, formatting, and helper logic.
 
-# NOTE: See breakdown + explanation of below code for importing JSON file data at the end of this file.
+# NOTE: See breakdown + explanation of below code related to importing JSON file data at the end of this file.
 
 from datetime import datetime     #⬅️ Not related to importing JSON file; imported for date validation.
 
