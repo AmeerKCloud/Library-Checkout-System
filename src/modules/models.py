@@ -49,7 +49,6 @@ class Library:
             if item["title"] == self.book_title and item["author"] == self.book_author:
                 if item["available"] == False:
                     item["available"] = True
-                    print(f"You have now returned {self.book_title.title()}, by {self.book_author.title()}")
                     return item["book_id"], item["available"]
 
 class Book:
