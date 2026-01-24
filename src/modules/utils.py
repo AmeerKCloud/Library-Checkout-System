@@ -3,6 +3,7 @@
 
 # NOTE: See breakdown + explanation of below code at the end of this file.
 
+from datetime import datetime
 import os
 
 def get_project_root():
@@ -42,6 +43,16 @@ class UserInputs:
                 return self.u_name
             else:
                 print("❌ Field cannot be blank.")
+
+    def valid_date_format(self, date_string, format_code):
+        """Validates if a date string matches the specified format."""
+
+        try:
+            valid_date = datetime.strptime(date_string, format_code)
+            print(f"\nValid date? {valid_date}")
+            return valid_date
+        except ValueError:
+            return None
 
     def date(self):
         format_to_check = "%m/%d/%Y"
