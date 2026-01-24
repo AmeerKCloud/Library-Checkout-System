@@ -98,7 +98,7 @@ class User:
                 }
 
                 User.user_borrowed_books_data[self.u_name].append(book)
-                print(f"\nYou have now borrowed {title}, by {author}")
+                print(f"\nYou have now borrowed {title}, by {author}, on {date}")
                 break
             
         return User.user_borrowed_books_data
@@ -117,7 +117,7 @@ class User:
                 }
 
                 User.user_returned_books_data[self.u_name].append(book)
-                print(f"Returned: {title} by {author}, on: {date}")
+                print(f"\nYou have now returned {title}, by {author}, on {date}")
 
                 if self.u_name in User.user_borrowed_books_data:
                     for item in User.user_borrowed_books_data[self.u_name]: 
