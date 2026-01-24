@@ -127,11 +127,11 @@ class Presentation:
         self.trans_type = trans_type
         self.book_transac_history = book_transac_history
 
-        if len(self.book_transac_history[u_name]) == 0:
+        if len(self.book_transac_history[self.user_name]) == 0:
             print(f"\nThere are currently no {self.trans_type} books to show. 😓")
         else:
-            for name_on_record, books_list in self.book_transac_history[u_name].items():
-                if name_on_record == u_name:
+            for name_on_record, books_list in self.book_transac_history.items():
+                if name_on_record == self.user_name:
                     print(f"\nAll currently borrowed books history for {name_on_record}:")
                     for item in books_list:
                         print("-------------------------------------------------")
