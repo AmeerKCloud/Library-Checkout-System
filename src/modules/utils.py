@@ -49,7 +49,6 @@ class UserInputs:
 
         try:
             valid_date = datetime.strptime(date_string, format_code)
-            print(f"\nValid date? {valid_date}")
             return valid_date
         except ValueError:
             return None

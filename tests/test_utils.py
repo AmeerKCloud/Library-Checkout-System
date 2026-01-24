@@ -61,7 +61,7 @@ class UserInputs:
         try:
             # Try to parse the string into a datetime object
             valid_date = datetime.strptime(date_string, format_code)   #⬅️'.strptime()' ie 'String Parse Time': Takes a string that looks like a date; parses it into a Python datetime object based on a format you tell it
-            print(f"\nValid date? {valid_date}")
+            print(f"\nValid date? {valid_date}")          #⬅️ for testing purposes
             return valid_date
         except ValueError:
             # If a ValueError is raised, the format or date itself is invalid
