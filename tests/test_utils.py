@@ -119,9 +119,6 @@ class Presentation:
     presentable when printed while also keeping the 'test_main.py' 
     decluttered or less long than it needs to be."""
 
-    # def __init__(self, book_transac_history):
-    #     self.book_transac_history = book_transac_history
-
     def print_transac_history(self, u_name, trans_type, book_transac_history):          #⬅️ Currently working on this method.
         self.user_name = u_name
         self.trans_type = trans_type
