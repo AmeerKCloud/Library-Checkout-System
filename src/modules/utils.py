@@ -68,6 +68,34 @@ class UserInputs:
                 print("❌ Field cannot be blank OR enter only the letter choices provided ('a', 'b', 'r', 'v', 'e').")
 
 
+
+class Presentation:
+    """This class contains methods that make certain information 
+    presentable when printed while also keeping the 'test_main.py' 
+    decluttered or less long than it needs to be."""
+
+    # def __init__(self, book_transac_history):
+    #     self.book_transac_history = book_transac_history
+
+    def print_transac_history(self, u_name, trans_type, book_transac_history):          #⬅️ Currently working on this method.
+        self.user_name = u_name
+        self.trans_type = trans_type
+        self.book_transac_history = book_transac_history
+
+        if len(self.book_transac_history[self.user_name]) == 0:
+            print(f"\nThere are currently no {self.trans_type} books to show. 😓")
+        else:
+            for name_on_record, books_list in self.book_transac_history.items():
+                if name_on_record == self.user_name:
+                    print(f"\nAll currently {self.trans_type} books history for {name_on_record}:")
+                    for item in books_list:
+                        print("-------------------------------------------------")
+                        for key, value in item.items():
+                            print(f"{key}: {value}")
+
+
+
+
 # ______ IMPORTANT: Explanation + Breakdown of JSON file data importing ______:
 
 # What is the intent behind this code in light of this project?
