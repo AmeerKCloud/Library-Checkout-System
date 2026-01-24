@@ -2,7 +2,7 @@
 # - To see the prototype/experimental/test code, visit the 'tests' folder
 
 from modules.models import Library, Book, User
-from modules.utils import UserInputs, get_data_file
+from modules.utils import UserInputs, Presentation, get_data_file
 
 import sys
 import os
