@@ -1,5 +1,5 @@
 # The final main program for the library checkout system program.
-# - To see the prototype/experimental/test code, visit the 'tests' folder
+# - To see the prototype/experimental/test code & all explanatory notes, visit the 'tests' folder
 
 from modules.models import Library, Book, User
 from modules.utils import UserInputs, Presentation, get_data_file
