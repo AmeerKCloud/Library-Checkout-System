@@ -52,7 +52,6 @@ class Library:
             if item["title"] == self.book_title and item["author"] == self.book_author:     #⬅️ This way is better & less prone to errors according to ChatGPT.
                 if item["available"] == False:
                     item["available"] = True
-                    print(f"You have now returned {self.book_title.title()}, by {self.book_author.title()}")
                     return item["book_id"], item["available"]
 
 class Book:
@@ -107,7 +106,7 @@ class User:                                                             #⬅️ 
                 }
 
                 User.user_borrowed_books_data[self.u_name].append(book)
-                print(f"Borrowed: {title} by {author}, on: {date}")
+                print(f"\nYou have now borrowed {title}, by {author}, on {date}")
                 break
         print(User.user_borrowed_books_data)                                  #⬅️ For testing purposes. Prints dict. of users borrowed books.
         return User.user_borrowed_books_data
@@ -127,7 +126,7 @@ class User:                                                             #⬅️ 
                 }
 
                 User.user_returned_books_data[self.u_name].append(book)
-                print(f"Returned: {title} by {author}, on: {date}")
+                print(f"\nYou have now returned {title}, by {author}, on {date}")
 
                 if self.u_name in User.user_borrowed_books_data:
                     for item in User.user_borrowed_books_data[self.u_name]: 
