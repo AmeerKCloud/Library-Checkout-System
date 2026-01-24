@@ -132,7 +132,7 @@ class Presentation:
         else:
             for name_on_record, books_list in self.book_transac_history.items():
                 if name_on_record == self.user_name:
-                    print(f"\nAll currently borrowed books history for {name_on_record}:")
+                    print(f"\nAll currently {self.trans_type} books history for {name_on_record}:")
                     for item in books_list:
                         print("-------------------------------------------------")
                         for key, value in item.items():
