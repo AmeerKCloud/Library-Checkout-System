@@ -67,7 +67,7 @@ class UserInputs:
             # If a ValueError is raised, the format or date itself is invalid
             return None
 
-    def date(self):                 #⬅️ Currently here, trying to fix date format validation (completed).
+    def date(self):                 #⬅️ Currently here, trying to fix date format validation (✅ resolved/ completed).
 
         format_to_check = "%m/%d/%Y"    #➡️ Capital 'Y' means four Y's for the year format
 

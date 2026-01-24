@@ -44,10 +44,23 @@ class UserInputs:
                 print("❌ Field cannot be blank.")
 
     def date(self):
+        format_to_check = "%m/%d/%Y"
+
         while True:
-            self.transac_date = input("\nEnter todays date:\n")
+            self.transac_date = input("\nEnter todays date (MM/DD/YYYY):\n")
+
+            if self.transac_date == "e":
+                break
+
             if self.transac_date != "":
-                return self.transac_date
+
+                validated_date = self.valid_date_format(self.transac_date, format_to_check)
+
+                if validated_date:
+                    formatted_date = validated_date.strftime(format_to_check)  #⬅️ '.strftime()' ie 'String Format Time': Takes a Python datetime object and converts it back to a formatted string.
+                    return formatted_date
+                else:
+                    print("❌ Invalid date format. Try again.")
             else:
                 print("❌ Field cannot be blank.")
 
