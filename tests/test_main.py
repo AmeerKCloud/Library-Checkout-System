@@ -142,8 +142,9 @@ while True:
 
                 elif user_option_choice_3 == "r":
                     transac_type = "returned"
-                    returned_transac_data = user.user_returned_books_data
-                    presentation.print_transac_history(user_name, transac_type, returned_transac_data)
+                    # returned_transac_data = user.user_returned_books_data
+                    # presentation.print_transac_history(user_name, transac_type, returned_transac_data)
+                    presentation.print_transac_history(user_name, transac_type, user.user_returned_books_data)
 
                 elif user_option_choice_3 == "e":
                     break
