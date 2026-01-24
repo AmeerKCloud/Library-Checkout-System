@@ -97,34 +97,21 @@ while True:
                     break
 
         elif user_option_choice_1 == "v":
-            view_past_transacs = input("Enter 'b' to view all currently borrowed books.\nEnter 'r' to view all returned books:\n").lower()
-            
-            if view_past_transacs == "b":
+            presentation = Presentation()
 
-                if len(user.user_borrowed_books_data[user_name]) == 0:
-                    print("\nThere are currently no borrowed books to show.")
-                else:
-                    for name, books_list in user.user_borrowed_books_data.items():
-                        if name == user_name:
-                            print(f"\nAll currently borrowed books history for {name}:")
-                            for item in books_list:
-                                print("-------------------------------------------------")
-                                for key, value in item.items():
-                                    print(f"{key}: {value}")
+            while True:
+                user_option_choice_3 = user_inputs.menu_3(user_name)
+                
+                if user_option_choice_3 == "b":
+                    transac_type = "borrowed"
+                    presentation.print_transac_history(user_name, transac_type, user.user_borrowed_books_data)
 
+                elif user_option_choice_3 == "r":
+                    transac_type = "returned"
+                    presentation.print_transac_history(user_name, transac_type, user.user_returned_books_data)
 
-            elif view_past_transacs == "r":
-
-                if len(user.user_returned_books_data[user_name]) == 0:
-                    print("\nThere are currently no returned books to show.")
-                else:
-                    for name, books_list in user.user_returned_books_data.items():
-                        if name == user_name:
-                            print(f"\nAll returned books history for {name}:")
-                            for item in books_list:
-                                print("-------------------------------------------------")
-                                for key, value in item.items():
-                                    print(f"{key}: {value}")
+                elif user_option_choice_3 == "e":
+                    break
 
         elif user_option_choice_1 == "e":
             break
