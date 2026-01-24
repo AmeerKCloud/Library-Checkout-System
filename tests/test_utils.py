@@ -4,6 +4,8 @@
 # NOTE: See breakdown + explanation of below code for importing JSON file data at the end of this file.
 
 from datetime import datetime     #⬅️ Not related to importing JSON file; imported for date validation.
+
+#|--------------------- ⬇️JSON-related ------------------------|
 import os
 
 def get_project_root():
@@ -13,6 +15,7 @@ def get_project_root():
 def get_data_file(filename):
     return os.path.join(get_project_root(), "data", filename)
 
+#|--------------------- JSON-related ⬆️ ------------------------|
 
 
 class UserInputs:
